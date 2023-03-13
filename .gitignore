@@ -2,6 +2,7 @@
 *.class
 *.log
 *.pyc
+*.exe
 *.swp
 .DS_Store
 .atom/
@@ -9,6 +10,7 @@
 .history
 .svn/
 migrate_working_dir/
+firebase-win.exe
 
 # IntelliJ related
 *.iml
