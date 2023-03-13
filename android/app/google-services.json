@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "12244031435",
+    "project_id": "wingames-f2a2a",
+    "storage_bucket": "wingames-f2a2a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:12244031435:android:a2c2d14c242e64be3e484e",
+        "android_client_info": {
+          "package_name": "app.com.wingames"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "12244031435-ilrjm7fuibhm81livoo5lfmskgg90om3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDq3_Ja5qUcRuejkIa7rybtxR0oMidWMg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "12244031435-ilrjm7fuibhm81livoo5lfmskgg90om3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:12244031435:android:f37352227252031c3e484e",
+        "android_client_info": {
+          "package_name": "com.example.wingame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "12244031435-ilrjm7fuibhm81livoo5lfmskgg90om3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDq3_Ja5qUcRuejkIa7rybtxR0oMidWMg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "12244031435-ilrjm7fuibhm81livoo5lfmskgg90om3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
