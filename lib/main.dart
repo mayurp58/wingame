@@ -202,11 +202,11 @@ class _ShowSplashState extends State<ShowSplash> {
         child: prefix0.SplashScreen(
           seconds: 4,
           image: Image.asset("assets/wingame.gif",fit: BoxFit.fitWidth,alignment: Alignment.center,width: 200,),
-          navigateAfterSeconds: LoginPage(),
+          navigateAfterSeconds: const LoginPage(),
           photoSize: MediaQuery.of(context).size.height * 0.30,
           loaderColor: HexColor(globals.color_pink),
           useLoader : true,
-            loadingText:Text("Welcome To Wingame",style: TextStyle(color: Colors.white),),
+            loadingText:const Text("Welcome To Wingame",style: TextStyle(color: Colors.white),),
             backgroundColor:HexColor(globals.color_background),
 
         )
