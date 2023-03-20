@@ -68,10 +68,10 @@ class _StarlineGameplayHeaderState extends State<StarlineGameplayHeader> {
       height: 110,
       width: double.infinity,
       child: Card(
-        color:Colors.black ,
+        color:HexColor(globals.color_background) ,
         elevation: 20, //shadow elevation for card
         margin: EdgeInsets.all(8),
-        shadowColor: HexColor("#FEDB87"),
+        shadowColor: HexColor(globals.color_blue),
         child: Column(
           children: [
 

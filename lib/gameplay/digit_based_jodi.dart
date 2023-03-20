@@ -3,7 +3,7 @@ import 'package:wingame/widgets/GradientText.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hexcolor/hexcolor.dart';
-
+import 'package:wingame/globalvar.dart' as globals;
 import '../common/theme_helper.dart';
 import '../widgets/appbar.dart';
 import 'gameplay_header.dart';
@@ -50,11 +50,13 @@ class _DigitBasedJodiState extends State<DigitBasedJodi> {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
+      backgroundColor: HexColor(globals.color_background),
       appBar: PreferredSize(
           preferredSize: const Size(double.infinity, kToolbarHeight),
           child :  Appbar()),
       bottomNavigationBar: submitButtonWidget(context),
       body:SingleChildScrollView(
+
         child: Column(
           children: [
             GameplayHeader(id:widget.id.toString(),title: widget.title,type: "Digit Based Jodi",session: "",date: widget.date,),
@@ -62,11 +64,14 @@ class _DigitBasedJodiState extends State<DigitBasedJodi> {
             Container(
               //height: ,
               width: double.infinity,
+              decoration: BoxDecoration(
+                  color: Colors.black
+              ),
               child: Card(
-                color: Colors.black,
-                elevation: 20, //shadow elevation for card
-                margin: EdgeInsets.all(8),
-                shadowColor: HexColor("#FEDB87"),
+                color: HexColor(globals.color_background),
+                elevation: 10, //shadow elevation for card
+                margin: EdgeInsets.all(2),
+                shadowColor:  HexColor(globals.color_blue),
                 child: Column(
                   children: [
 
@@ -168,7 +173,7 @@ class _DigitBasedJodiState extends State<DigitBasedJodi> {
                     ),
                     SizedBox(height: 40,),
                     GradientText("Bet Jodies : " + bet_patties, ),
-                    SizedBox(height: 40,),
+                    SizedBox(height: 200,),
                   ],
                 ),
               ),

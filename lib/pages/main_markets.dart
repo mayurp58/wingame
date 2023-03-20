@@ -189,57 +189,63 @@ class _MainMarketsState extends State<MainMarkets> {
                        gradient: LinearGradient(colors: [Color(0xffFEDB87),Color(0xffBD7923),Color(0xffFEDB87)],),
                        width: 1,
                      ),*/
-                    border: Border.all(color: HexColor(globals.color_pink)),
-                     borderRadius: BorderRadius.circular(8),
-                     color: HexColor(globals.color_background)
+                     border: Border.all(color: landingdata[index]["status"]!="closed" ? HexColor(globals.color_blue) : Colors.grey),
+                     borderRadius: BorderRadius.circular(15),
+                     color: HexColor(globals.color_background),
                  ),
                  child: Column(
                    children: [
-                     SizedBox(height: 5,),
-                     landingdata[index]["status"]!="closed" ? GradientText(landingdata[index]["prov_name"],style: TextStyle(fontWeight: FontWeight.w900, fontSize: 18),) : Text(landingdata[index]["prov_name"],style: TextStyle(color:Colors.grey,fontWeight: FontWeight.w900, fontSize: 18),),
+                     SizedBox(height: 20,),
+                     landingdata[index]["status"]!="closed" ? Text(landingdata[index]["prov_name"],style: TextStyle(fontWeight: FontWeight.w900, fontSize: 18,color: Colors.white70),) : Text(landingdata[index]["prov_name"],style: TextStyle(color:Colors.grey,fontWeight: FontWeight.w900, fontSize: 18),),
                      SizedBox(height: 15,),
                      landingdata[index]["status"]!="closed" ? GradientText(landingdata[index]["prov_result"],style: TextStyle(fontWeight: FontWeight.w900, fontSize: 20),) : Text(landingdata[index]["prov_result"],style: TextStyle(color:Colors.grey,fontWeight: FontWeight.w900, fontSize: 20),),
                      SizedBox(height: 10,),
-                     RichText(
-                         text: TextSpan(
-                             style: TextStyle(color: Colors.black),
-                             children: [
-                               TextSpan(text: "Bid Open: ", style: TextStyle(color: landingdata[index]["status"]!="closed" ? Colors.white : Colors.grey, fontWeight: FontWeight.bold,fontSize: 10)),
-                               TextSpan(text: landingdata[index]["open_time"], style: TextStyle(fontWeight: FontWeight.bold,color: landingdata[index]["status"]!="closed" ? Colors.white : Colors.grey,fontSize: 10 )),
-                             ]
-                         )),
-                     SizedBox(height: 5,),
-                     RichText(
-                         text: TextSpan(
-                             style: TextStyle(color: Colors.black),
-                             children: [
-                               TextSpan(text: "Bid Close: ", style: TextStyle(color: landingdata[index]["status"]!="closed" ? Colors.white : Colors.grey, fontWeight: FontWeight.bold,fontSize: 10)),
-                               TextSpan(text: landingdata[index]["close_time"], style: TextStyle(fontWeight: FontWeight.bold,color: landingdata[index]["status"]!="closed" ? Colors.white : Colors.grey,fontSize: 10))
-                             ]
-                         )),
+                     Row(
+                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                       children: [
+                         RichText(
+                             text: TextSpan(
+                                 style: TextStyle(color: Colors.black),
+                                 children: [
+                                   //TextSpan(text: "Open: ", style: TextStyle(color: landingdata[index]["status"]!="closed" ? Colors.white : Colors.grey, fontWeight: FontWeight.bold,fontSize: 10)),
+                                   TextSpan(text: landingdata[index]["open_time"], style: TextStyle(fontWeight: FontWeight.bold,color: landingdata[index]["status"]!="closed" ? Colors.white70 : Colors.grey,fontSize: 10 )),
+                                 ]
+                             )),
+                         SizedBox(height: 5,),
+                         RichText(
+                             text: TextSpan(
+                                 style: TextStyle(color: Colors.black),
+                                 children: [
+                                   //TextSpan(text: "Close: ", style: TextStyle(color: landingdata[index]["status"]!="closed" ? Colors.white : Colors.grey, fontWeight: FontWeight.bold,fontSize: 10)),
+                                   TextSpan(text: landingdata[index]["close_time"], style: TextStyle(fontWeight: FontWeight.bold,color: landingdata[index]["status"]!="closed" ? Colors.white70 : Colors.grey,fontSize: 10))
+                                 ]
+                             )),
+                       ],
+                     ),
+
                      SizedBox(height: 12,),
-                     GradientText(
+                     Text(
                        landingdata[index]["status"] == "both" ?
                        "Betting Running For Both" :
                        landingdata[index]["status"] == "closed" ? "Betting Closed" : "Betting Running For Close"
 
-                       ,style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
-                     SizedBox(height: 5,),
-                     landingdata[index]["status"]!="closed" ? Container(
-                       width: double.infinity,
-                       height: 31,
-                       alignment: Alignment.center,
-                       decoration: BoxDecoration(
-                         borderRadius: BorderRadius.only(bottomLeft: Radius.circular(7),bottomRight: Radius.circular(7)),
-                         gradient: LinearGradient(
-                             begin: Alignment.topCenter,
-                             end: Alignment.bottomCenter,
-                             colors: <Color>[
-                               HexColor(globals.color_blue),
-                               HexColor(globals.color_pink),]),
-                       ),
-                       child: Text("Play Game",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
-                     ) : Container(),
+                       ,style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold,color: Colors.white70),),
+                     //SizedBox(height: 5,),
+                     // landingdata[index]["status"]!="closed" ? Container(
+                     //   width: double.infinity,
+                     //   height: 31,
+                     //   alignment: Alignment.center,
+                     //   decoration: BoxDecoration(
+                     //     borderRadius: BorderRadius.only(bottomLeft: Radius.circular(7),bottomRight: Radius.circular(7)),
+                     //     gradient: LinearGradient(
+                     //         begin: Alignment.topCenter,
+                     //         end: Alignment.bottomCenter,
+                     //         colors: <Color>[
+                     //           HexColor(globals.color_blue),
+                     //           HexColor(globals.color_pink),]),
+                     //   ),
+                     //   child: Text("Play Game",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
+                     // ) : Container(),
                    ],
                  ),
                ),

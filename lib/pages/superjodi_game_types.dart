@@ -97,7 +97,7 @@ class _Sup_game_typesState extends State<Sup_game_types> {
                     child: Container(
                         decoration: BoxDecoration(
                           color: HexColor("#000000"),
-                          gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [Color(0xffFEDB87),Color(0xffBD7923),Color(0xffFEDB87)],),
+                          gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [HexColor(globals.color_blue),HexColor(globals.color_pink)],),
                           borderRadius: BorderRadius.all(Radius.circular(15)),
                         ),
                         padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
@@ -118,7 +118,7 @@ class _Sup_game_typesState extends State<Sup_game_types> {
                     padding: EdgeInsets.fromLTRB(8, 0, 8, 0),
                     decoration: BoxDecoration(
                       border: Border.all(color: HexColor("#000000")),
-                      gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [Color(0xffFEDB87),Color(0xffBD7923),Color(0xffFEDB87)],),
+                      gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [HexColor(globals.color_blue),HexColor(globals.color_pink)],),
                       borderRadius: BorderRadius.circular(8),
                       color: Colors.white,
                       boxShadow: [
@@ -156,7 +156,7 @@ class _Sup_game_typesState extends State<Sup_game_types> {
                     padding: EdgeInsets.fromLTRB(8, 0, 8, 0),
                     decoration: BoxDecoration(
                       border: Border.all(color: HexColor("#000000")),
-                      gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [Color(0xffFEDB87),Color(0xffBD7923),Color(0xffFEDB87)],),
+                      gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [HexColor(globals.color_blue),HexColor(globals.color_pink)],),
                       borderRadius: BorderRadius.circular(8),
                       color: Colors.white,
                       boxShadow: [BoxShadow(color: HexColor("#FEDB87"),blurRadius: 1)],
@@ -189,7 +189,7 @@ class _Sup_game_typesState extends State<Sup_game_types> {
                     decoration: BoxDecoration(
                       border: Border.all(color: HexColor("#000000")),
                       borderRadius: BorderRadius.circular(8),
-                      gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [Color(0xffFEDB87),Color(0xffBD7923),Color(0xffFEDB87)],),
+                      gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [HexColor(globals.color_blue),HexColor(globals.color_pink)],),
                       color: Colors.white,
                       boxShadow: [BoxShadow(color: HexColor("#FEDB87"),blurRadius: 1)],
                     ),
@@ -221,7 +221,7 @@ class _Sup_game_typesState extends State<Sup_game_types> {
                     decoration: BoxDecoration(
                       border: Border.all(color: HexColor("#000000")),
                       borderRadius: BorderRadius.circular(8),
-                      gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [Color(0xffFEDB87),Color(0xffBD7923),Color(0xffFEDB87)],),
+                      gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [HexColor(globals.color_blue),HexColor(globals.color_pink)],),
                       color: Colors.white,
                       boxShadow: [BoxShadow(color: HexColor("#FEDB87"),blurRadius: 1)],
                     ),

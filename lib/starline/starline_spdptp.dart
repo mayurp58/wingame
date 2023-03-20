@@ -81,11 +81,14 @@ class _StarlineSpDpTpState extends State<StarlineSpDpTp> {
             Container(
               //height: ,
               width: double.infinity,
+              decoration: BoxDecoration(
+                  color: Colors.black
+              ),
               child: Card(
-                color: Colors.black,
-                elevation: 20, //shadow elevation for card
-                margin: EdgeInsets.all(8),
-                shadowColor: HexColor("#FEDB87"),
+                color: HexColor(globals.color_background),
+                elevation: 10, //shadow elevation for card
+                margin: EdgeInsets.all(2),
+                shadowColor:  HexColor(globals.color_blue),
                 child: Column(
                   children: [
 
@@ -106,7 +109,7 @@ class _StarlineSpDpTpState extends State<StarlineSpDpTp> {
                                       Checkbox(
                                         value: this.sp,
                                         activeColor: Colors.white,
-                                        checkColor: Colors.deepOrange,
+                                        checkColor: HexColor(globals.color_blue),
                                         side: BorderSide(color: Colors.white),
                                         onChanged: (bool? value) {
                                           setState(() {
@@ -127,7 +130,7 @@ class _StarlineSpDpTpState extends State<StarlineSpDpTp> {
                                       Checkbox(
                                         value: this.dp,
                                         activeColor: Colors.white,
-                                        checkColor: Colors.deepOrange,
+                                        checkColor: HexColor(globals.color_blue),
                                         side: BorderSide(color: Colors.white),
                                         onChanged: (bool? valuedp) {
                                           setState(() {
@@ -148,7 +151,7 @@ class _StarlineSpDpTpState extends State<StarlineSpDpTp> {
                                       Checkbox(
                                         value: this.tp,
                                         activeColor: Colors.white,
-                                        checkColor: Colors.deepOrange,
+                                        checkColor: HexColor(globals.color_blue),
                                         side: BorderSide(color: Colors.white),
                                         onChanged: (bool? valuetp) {
                                           setState(() {
@@ -230,7 +233,7 @@ class _StarlineSpDpTpState extends State<StarlineSpDpTp> {
                     Container(
                         padding: EdgeInsets.all(15),
                         child: GradientText(bet_patties)),
-                    SizedBox(height: 40,),
+                    SizedBox(height: 150,),
                   ],
                 ),
               ),

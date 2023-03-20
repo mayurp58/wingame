@@ -48,16 +48,21 @@ class _SubmitStarlineBidState extends State<SubmitStarlineBid> {
         centerTitle: true,
         flexibleSpace: Container(
           decoration: BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: <Color>[
-                  HexColor("#FEDB87"),
-                  HexColor("#BD7923"),
-                  HexColor("#FEDB87"),]),
+              color: HexColor(globals.color_background),
+              boxShadow: [new BoxShadow(
+                color: HexColor(globals.color_blue),
+                blurRadius: 20.0,
+              ),]
+            // gradient: LinearGradient(
+            //     begin: Alignment.topCenter,
+            //     end: Alignment.bottomCenter,
+            //     colors: <Color>[
+            //       HexColor("#FEDB87"),
+            //       HexColor("#BD7923"),
+            //       HexColor("#FEDB87"),]),
           ),
         ),
-        backgroundColor: HexColor("#FEDB87"),
+        //backgroundColor: HexColor("#FEDB87"),
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
@@ -82,7 +87,7 @@ class _SubmitStarlineBidState extends State<SubmitStarlineBid> {
                 child: Container(
                   decoration: BoxDecoration(
                     border: const GradientBoxBorder(
-                      gradient: LinearGradient(colors: [Color(0xffFEDB87),Color(0xffBD7923),Color(0xffFEDB87)],),
+                      gradient: LinearGradient(colors: [Color(0xffff66c4),Color(0xff514ed8)],),
                       width: 1,
                     ),
                     borderRadius: BorderRadius.circular(8),
@@ -97,7 +102,7 @@ class _SubmitStarlineBidState extends State<SubmitStarlineBid> {
                         child: Container(
                           decoration: BoxDecoration(
                             color: Colors.white,
-                            gradient: LinearGradient(colors: [Color(0xffFEDB87),Color(0xffBD7923),Color(0xffFEDB87)],),
+                            gradient: LinearGradient(colors: [HexColor(globals.color_pink),HexColor(globals.color_blue)],),
                             borderRadius: BorderRadius.only(
                                 topRight: Radius.circular(0),
                                 bottomRight: Radius.circular(0),
@@ -109,7 +114,7 @@ class _SubmitStarlineBidState extends State<SubmitStarlineBid> {
                           child: Column(
                             children: [
                               SizedBox(height: 5,),
-                              Image.asset(widget.image.toString(),height: 30,),
+                              Image.asset("assets/"+widget.image.toString(),height: 30,),
                               SizedBox(height: 5,),
                               Text(widget.game_name.toString(),textAlign: TextAlign.center, style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500,color: HexColor("#ffffff")),)
                             ],
@@ -126,13 +131,13 @@ class _SubmitStarlineBidState extends State<SubmitStarlineBid> {
                             children: [
                               Align(
                                 alignment: Alignment.topLeft,
-                                child: Text("Points : " + widget.itemDetail[index]["game_bidding_points"],textAlign: TextAlign.left,style: TextStyle(color: HexColor("#FEDB87"),fontWeight: FontWeight.bold),),
+                                child: Text("Points : " + widget.itemDetail[index]["game_bidding_points"],textAlign: TextAlign.left,style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
                               ),
 
                               SizedBox(height: 6,),
                               Align(
                                 alignment: Alignment.bottomLeft,
-                                child: Text("Digit    : " + widget.itemDetail[index]["game_brackets"],textAlign: TextAlign.left,style: TextStyle(color: HexColor("#FEDB87"),fontWeight: FontWeight.bold),),
+                                child: Text("Digit    : " + widget.itemDetail[index]["game_brackets"],textAlign: TextAlign.left,style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
                               ),
                             ],
                           ),
@@ -167,12 +172,12 @@ class _SubmitStarlineBidState extends State<SubmitStarlineBid> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text("Total Points",style: TextStyle(color: HexColor("#FEDB87"),fontWeight: FontWeight.bold),),
+                        Text("Total Points",style: TextStyle(color: HexColor(globals.color_pink),fontWeight: FontWeight.bold),),
                         RichText(
                           text: TextSpan(
                             children: [
-                              WidgetSpan(child: Icon(Icons.currency_rupee,color: HexColor("#FEDB87"),size: 14,)),
-                              TextSpan(text: widget.total.toString(), style: TextStyle(fontWeight: FontWeight.bold,color: HexColor("#FEDB87")),),
+                              WidgetSpan(child: Icon(Icons.currency_rupee,color: HexColor(globals.color_pink),size: 14,)),
+                              TextSpan(text: widget.total.toString(), style: TextStyle(fontWeight: FontWeight.bold,color: HexColor(globals.color_pink)),),
                             ],
                           ),),
                         //Text(widget.total.toString(),style: TextStyle(color: HexColor("#FEDB87"),fontWeight: FontWeight.bold),),

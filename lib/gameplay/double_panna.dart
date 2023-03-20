@@ -2,7 +2,7 @@ import 'package:wingame/gameplay/submit_bid.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hexcolor/hexcolor.dart';
-
+import 'package:wingame/globalvar.dart' as globals;
 import '../common/theme_helper.dart';
 import '../widgets/appbar.dart';
 import 'gameplay_header.dart';
@@ -69,7 +69,7 @@ class _DoublePannaState extends State<DoublePanna> with SingleTickerProviderStat
               GameplayHeader(id:widget.id.toString(),title: widget.title,type: "Double Pana",session: widget.session,date: widget.date,),
               //////////////////////////////Heade Ends Here////////////////////////////
               Container(
-                color: Colors.black,
+                color: HexColor(globals.color_background),
                 padding: EdgeInsets.all(5),
                 child: TabBar(
                     isScrollable: true,
@@ -78,7 +78,7 @@ class _DoublePannaState extends State<DoublePanna> with SingleTickerProviderStat
                     indicatorSize: TabBarIndicatorSize.tab,
                     indicator: BoxDecoration(
                         gradient: LinearGradient(
-                            colors: [Color(0xffFEDB87),Color(0xffBD7923),Color(0xffFEDB87)]),
+                            colors: [HexColor(globals.color_blue),HexColor(globals.color_pink)]),
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.black),
                     tabs: [
@@ -152,11 +152,14 @@ class _DoublePannaState extends State<DoublePanna> with SingleTickerProviderStat
     return Container(
       //height: ,
       width: double.infinity,
+      decoration: BoxDecoration(
+          color: Colors.black
+      ),
       child: Card(
-        color: Colors.black,
-        elevation: 20, //shadow elevation for card
-        margin: EdgeInsets.all(8),
-        shadowColor: HexColor("#FEDB87"),
+        color: HexColor(globals.color_background),
+        elevation: 10, //shadow elevation for card
+        margin: EdgeInsets.all(2),
+        shadowColor:  HexColor(globals.color_blue),
         child: Column(
           children: [
             Padding(

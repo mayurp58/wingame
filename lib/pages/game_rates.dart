@@ -105,10 +105,10 @@ class _GameRatesState extends State<GameRates> {
               child: GradientText("Market Game Win Ratio",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 22),),
             ),
             Card(
-              color: Colors.black,
+              color: HexColor(globals.color_background),
               elevation: 10, //shadow elevation for card
               margin: EdgeInsets.all(8),
-              shadowColor: HexColor("#FEDB87"),
+              shadowColor: HexColor(globals.color_pink),
               child: Padding(
                 padding: EdgeInsets.all(25),
                 child: ListView.separated(
@@ -124,9 +124,9 @@ class _GameRatesState extends State<GameRates> {
                     return Row(
 
                       children: [
-                        SizedBox(width: 10,child: Icon(Icons.gamepad_rounded,color: HexColor("#FEDB87"),size: 18,),),
-                        SizedBox(width: 10,),
-                        SizedBox(width: 100, child: Text(gamerates[index]["game_name"],style: TextStyle(fontSize: 16,color: Colors.white),)),
+                        SizedBox(width: 10,child: Icon(Icons.send,color: HexColor(globals.color_blue),size: 18,),),
+                        SizedBox(width: 15,),
+                        SizedBox(width: 138, child: Text(gamerates[index]["game_name"],style: TextStyle(fontSize: 16,color: Colors.white),)),
 
                         SizedBox(width: 40,),
                         Text(":-",style: TextStyle(fontSize: 16,color: Colors.white),),
@@ -143,10 +143,10 @@ class _GameRatesState extends State<GameRates> {
               child: GradientText("Starline Game Win Ratio",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 22),),
             ),
             Card(
-              color: Colors.black,
+              color: HexColor(globals.color_background),
               elevation: 10, //shadow elevation for card
               margin: EdgeInsets.all(8),
-              shadowColor: HexColor("#FEDB87"),
+              shadowColor: HexColor(globals.color_pink),
               child: Padding(
                 padding: EdgeInsets.all(25),
                 child: ListView.separated(
@@ -160,9 +160,9 @@ class _GameRatesState extends State<GameRates> {
                   {
                     return Row(
                       children: [
-                        SizedBox(width: 10, child :Icon(Icons.gamepad_rounded,color: HexColor("#FEDB87"),size: 18,)),
-                        SizedBox(width: 10,),
-                        SizedBox(width: 100, child: Text(starline[index]["game_name"],style: TextStyle(fontSize: 16,color: Colors.white),),),
+                        SizedBox(width: 10, child :Icon(Icons.send,color: HexColor(globals.color_blue),size: 18,)),
+                        SizedBox(width: 15,),
+                        SizedBox(width: 138, child: Text(starline[index]["game_name"],style: TextStyle(fontSize: 16,color: Colors.white),),),
                         SizedBox(width: 40,),
                         Text(":-",style: TextStyle(fontSize: 16,color: Colors.white),),
                         SizedBox(width: 10,),

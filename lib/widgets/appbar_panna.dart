@@ -36,7 +36,7 @@ class _AppbarPannaState extends State<AppbarPanna> with AutomaticKeepAliveClient
         bottom: TabBar(
             isScrollable: true,
             unselectedLabelColor: Colors.white,
-            labelColor: Colors.deepOrange,
+            labelColor: HexColor(globals.color_blue),
             indicatorColor: Colors.white,
             tabs: [
               Tab(

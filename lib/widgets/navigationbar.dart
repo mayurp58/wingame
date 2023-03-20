@@ -86,70 +86,70 @@ class AppDrawer extends StatelessWidget {
                 style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600,fontSize: 20),
               ),
             ),
-            ListTile(
-              leading: Icon(
-                Icons.home,
-                color: Colors.white,
-              ),
-              title: const Text('Home',
-              style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
-              ),
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => LandingPage()),
-                );
-              },
-            ),
-            ListTile(
-              leading: Icon(
-                Icons.person,
-                color: Colors.white,
-              ),
-              title: const Text('My Profile',
-                style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
-              ),
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ProfilePage()),
-                );
-              },
-            ),
-            ListTile(
-              leading: Icon(
-                Icons.wallet,
-                color: Colors.white,
-              ),
-              title: const Text('Wallet',
-                style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
-              ),
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Wallet()),
-                );
-              },
-            ),
-            ListTile(
-              leading: Icon(
-                Icons.history,
-                color: Colors.white,
-              ),
-              title: const Text('History',
-                style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
-              ),
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => HistoryTab()),
-                );
-              },
-            ),
+            // ListTile(
+            //   leading: Icon(
+            //     Icons.home,
+            //     color: Colors.white,
+            //   ),
+            //   title: const Text('Home',
+            //   style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
+            //   ),
+            //   onTap: () {
+            //     Navigator.pop(context);
+            //     Navigator.push(
+            //       context,
+            //       MaterialPageRoute(builder: (context) => LandingPage()),
+            //     );
+            //   },
+            // ),
+            // ListTile(
+            //   leading: Icon(
+            //     Icons.person,
+            //     color: Colors.white,
+            //   ),
+            //   title: const Text('My Profile',
+            //     style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
+            //   ),
+            //   onTap: () {
+            //     Navigator.pop(context);
+            //     Navigator.push(
+            //       context,
+            //       MaterialPageRoute(builder: (context) => ProfilePage()),
+            //     );
+            //   },
+            // ),
+            // ListTile(
+            //   leading: Icon(
+            //     Icons.wallet,
+            //     color: Colors.white,
+            //   ),
+            //   title: const Text('Wallet',
+            //     style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
+            //   ),
+            //   onTap: () {
+            //     Navigator.pop(context);
+            //     Navigator.push(
+            //       context,
+            //       MaterialPageRoute(builder: (context) => Wallet()),
+            //     );
+            //   },
+            // ),
+            // ListTile(
+            //   leading: Icon(
+            //     Icons.history,
+            //     color: Colors.white,
+            //   ),
+            //   title: const Text('History',
+            //     style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
+            //   ),
+            //   onTap: () {
+            //     Navigator.pop(context);
+            //     Navigator.push(
+            //       context,
+            //       MaterialPageRoute(builder: (context) => HistoryTab()),
+            //     );
+            //   },
+            // ),
             ListTile(
               leading: Icon(
                 Icons.password_sharp,
@@ -214,18 +214,18 @@ class AppDrawer extends StatelessWidget {
                 );
               },
             ),*/
-            ListTile(
-              leading: Icon(
-                FontAwesomeIcons.whatsapp,
-                color: Colors.green,
-              ),
-              title: const Text('Whatsapp Support',
-                style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
-              ),
-              onTap: () {
-                _launchWhatsapp();
-              },
-            ),
+            // ListTile(
+            //   leading: Icon(
+            //     FontAwesomeIcons.whatsapp,
+            //     color: Colors.green,
+            //   ),
+            //   title: const Text('Whatsapp Support',
+            //     style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
+            //   ),
+            //   onTap: () {
+            //     _launchWhatsapp();
+            //   },
+            // ),
             ListTile(
               leading: Icon(
                 Icons.logout,

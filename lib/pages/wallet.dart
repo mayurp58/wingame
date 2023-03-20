@@ -187,7 +187,7 @@ class _WalletState extends State<Wallet> with SingleTickerProviderStateMixin {
                 controller: _tabController,
                 // give the indicator a decoration (color and border radius)
                 indicator: BoxDecoration(
-                  gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [Color(0xffFEDB87),Color(0xffBD7923),Color(0xffFEDB87)],),
+                  gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [HexColor(globals.color_blue),HexColor(globals.color_pink)],),
                   borderRadius: BorderRadius.circular(
                     25.0,
                   ),
@@ -334,13 +334,13 @@ class _WalletState extends State<Wallet> with SingleTickerProviderStateMixin {
                                   style: TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.bold,
-                                      color: HexColor("#FEDB87")),
+                                      color: HexColor(globals.color_pink)),
                                 ),
                                 TextSpan(text: " "),
                                 WidgetSpan(
                                     child: Icon(
                                   Icons.currency_rupee,
-                                  color: HexColor("#FEDB87"),
+                                  color: HexColor(globals.color_pink),
                                   size: 14,
                                 )),
                                 TextSpan(
@@ -348,7 +348,7 @@ class _WalletState extends State<Wallet> with SingleTickerProviderStateMixin {
                                   style: TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.bold,
-                                      color: HexColor("#FEDB87")),
+                                      color: HexColor(globals.color_pink)),
                                 ),
                               ],
                             ),
@@ -402,7 +402,7 @@ class _WalletState extends State<Wallet> with SingleTickerProviderStateMixin {
                                     style: TextStyle(
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold,
-                                        color: HexColor("#FEDB87")),
+                                        color: Colors.white60),
                                   ),
                                   TextSpan(text: " "),
                                   TextSpan(
@@ -410,7 +410,7 @@ class _WalletState extends State<Wallet> with SingleTickerProviderStateMixin {
                                     style: TextStyle(
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold,
-                                        color: HexColor("#FEDB87")),
+                                        color: Colors.white60),
                                   ),
                                 ],
                               ),
@@ -426,7 +426,7 @@ class _WalletState extends State<Wallet> with SingleTickerProviderStateMixin {
                                     style: TextStyle(
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold,
-                                        color: HexColor("#FEDB87")),
+                                        color: Colors.white60),
                                   ),
                                   TextSpan(text: " "),
                                   TextSpan(
@@ -434,7 +434,7 @@ class _WalletState extends State<Wallet> with SingleTickerProviderStateMixin {
                                     style: TextStyle(
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold,
-                                        color: HexColor("#FEDB87")),
+                                        color: Colors.white60),
                                   ),
                                 ],
                               ),
@@ -450,7 +450,7 @@ class _WalletState extends State<Wallet> with SingleTickerProviderStateMixin {
                                     style: TextStyle(
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold,
-                                        color: HexColor("#FEDB87")),
+                                        color: Colors.white60),
                                   ),
                                   TextSpan(text: " "),
                                   TextSpan(
@@ -458,7 +458,7 @@ class _WalletState extends State<Wallet> with SingleTickerProviderStateMixin {
                                     style: TextStyle(
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold,
-                                        color: HexColor("#FEDB87")),
+                                        color: Colors.white60),
                                   ),
                                 ],
                               ),
@@ -474,7 +474,7 @@ class _WalletState extends State<Wallet> with SingleTickerProviderStateMixin {
                                     style: TextStyle(
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold,
-                                        color: HexColor("#FEDB87")),
+                                        color: Colors.white60),
                                   ),
                                   TextSpan(text: " "),
                                   TextSpan(
@@ -482,7 +482,7 @@ class _WalletState extends State<Wallet> with SingleTickerProviderStateMixin {
                                     style: TextStyle(
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold,
-                                        color: HexColor("#FEDB87")),
+                                        color: Colors.white60),
                                   ),
                                 ],
                               ),
@@ -498,7 +498,7 @@ class _WalletState extends State<Wallet> with SingleTickerProviderStateMixin {
                                     style: TextStyle(
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold,
-                                        color: HexColor("#FEDB87")),
+                                        color: Colors.white60),
                                   ),
                                   TextSpan(text: " "),
                                   TextSpan(
@@ -506,7 +506,7 @@ class _WalletState extends State<Wallet> with SingleTickerProviderStateMixin {
                                     style: TextStyle(
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold,
-                                        color: HexColor("#FEDB87")),
+                                        color: Colors.white60),
                                   ),
                                 ],
                               ),
@@ -665,13 +665,13 @@ class _WalletState extends State<Wallet> with SingleTickerProviderStateMixin {
                                     style: TextStyle(
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold,
-                                        color: HexColor("#FEDB87")),
+                                        color: HexColor(globals.color_pink)),
                                   ),
                                   TextSpan(text: " "),
                                   WidgetSpan(
                                       child: Icon(
                                     Icons.currency_rupee,
-                                    color: HexColor("#FEDB87"),
+                                    color: HexColor(globals.color_pink),
                                     size: 14,
                                   )),
                                   TextSpan(
@@ -679,7 +679,7 @@ class _WalletState extends State<Wallet> with SingleTickerProviderStateMixin {
                                     style: TextStyle(
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold,
-                                        color: HexColor("#FEDB87")),
+                                        color: HexColor(globals.color_pink)),
                                   ),
                                 ],
                               ),

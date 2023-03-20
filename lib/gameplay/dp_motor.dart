@@ -77,11 +77,14 @@ class _DpMotorState extends State<DpMotor> {
             Container(
               //height: ,
               width: double.infinity,
+              decoration: BoxDecoration(
+                  color: Colors.black
+              ),
               child: Card(
-                color: Colors.black,
-                elevation: 20, //shadow elevation for card
-                margin: EdgeInsets.all(8),
-                shadowColor: HexColor("#FEDB87"),
+                color: HexColor(globals.color_background),
+                elevation: 10, //shadow elevation for card
+                margin: EdgeInsets.all(2),
+                shadowColor:  HexColor(globals.color_blue),
                 child: Column(
                   children: [
 
@@ -138,7 +141,7 @@ class _DpMotorState extends State<DpMotor> {
                                 ),
                               ],
                             ),
-                            SizedBox(height: 40,),
+                            SizedBox(height: 310,),
                           ],
                         ),
 

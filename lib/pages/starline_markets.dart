@@ -173,12 +173,14 @@ class _StarlinemarketsState extends State<Starlinemarkets> {
       onWillPop: showExitPopup,
       child: Scaffold(
         backgroundColor: HexColor(globals.color_background),
+
         body: Column(
+
           children : [
             Container(
-              margin: EdgeInsets.fromLTRB(0, 5, 0, 5),
+              margin: EdgeInsets.fromLTRB(0, 5, 0, 25),
               decoration: BoxDecoration(
-                color: Colors.black,
+                color: HexColor(globals.color_background),
 
                 borderRadius: BorderRadius.circular(7)
               ),
@@ -191,7 +193,7 @@ class _StarlinemarketsState extends State<Starlinemarkets> {
                         style: ThemeHelper().filled_square_button(),
                         child: Padding(
                         padding: EdgeInsets.fromLTRB(0, 2, 0, 2),
-                        child: Text('Bid\nHistory',textAlign: TextAlign.center, style: TextStyle(fontSize: 12, color: Colors.white),),
+                        child: Text('Bid\nHistory',textAlign: TextAlign.center, style: TextStyle(fontSize: 12, color: HexColor(globals.color_pink)),),
                       ),
                         onPressed: (){
                           Navigator.push(
@@ -208,7 +210,7 @@ class _StarlinemarketsState extends State<Starlinemarkets> {
                       style: ThemeHelper().filled_square_button(),
                       child: Padding(
                         padding: EdgeInsets.fromLTRB(0, 2, 0, 2),
-                        child: Text('Result\nHistory',textAlign: TextAlign.center, style: TextStyle(fontSize: 12, color: Colors.white),),
+                        child: Text('Result\nHistory',textAlign: TextAlign.center, style: TextStyle(fontSize: 12, color: HexColor(globals.color_pink)),),
                       ),
                       //onPressed: _launchUrl,
                       onPressed: (){
@@ -217,7 +219,7 @@ class _StarlinemarketsState extends State<Starlinemarkets> {
                         });*/
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => WebpageLoader(url: "https://livegames.pro/livegames-starline-panel-chart",tabval: 1,)),
+                          MaterialPageRoute(builder: (context) => WebpageLoader(url: "https://www.wingame.pro/index.php/kalyan-starline-panel-chart",tabval: 1,)),
                         );
                       },
                     ),
@@ -229,7 +231,7 @@ class _StarlinemarketsState extends State<Starlinemarkets> {
                       style: ThemeHelper().filled_square_button(),
                       child: Padding(
                         padding: EdgeInsets.fromLTRB(0, 2, 0, 2),
-                        child: Text('Terms &\nConditions', textAlign: TextAlign.center, style: TextStyle(fontSize: 12, color: Colors.white),),
+                        child: Text('Terms &\nConditions', textAlign: TextAlign.center, style: TextStyle(fontSize: 12, color: HexColor(globals.color_pink)),),
                       ),
                       onPressed: (){
                         Navigator.push(
@@ -244,20 +246,20 @@ class _StarlinemarketsState extends State<Starlinemarkets> {
             ),
             ConstrainedBox(
 
-              constraints: BoxConstraints(minHeight: 150,maxHeight: deviceHeight-210),
+              constraints: BoxConstraints(minHeight: 150,maxHeight: deviceHeight-270),
               child: RefreshIndicator(
                 onRefresh: refreshList,
                 key: refreshKey,
-                color: Colors.black,
+                color: HexColor(globals.color_background),
                 child: Container(
 
-                    color: Colors.black,
+                    color: HexColor(globals.color_background),
                     child: GridView.count(
                     primary: false,
                     padding: const EdgeInsets.all(5),
                     crossAxisSpacing: 0,
                     mainAxisSpacing: 0,
-                    childAspectRatio: (1 / 0.85),
+                    childAspectRatio: (1 / 0.70),
                     crossAxisCount: 2,
                       children: List.generate(landingdata_starline.length, (index) {
                         return InkWell(
@@ -282,27 +284,27 @@ class _StarlinemarketsState extends State<Starlinemarkets> {
                           child: Container(
                             margin: EdgeInsets.all(4),
                             decoration: BoxDecoration(
-                              //border: Border.all(color: landingdata[index]["status"]!="closed" ? HexColor("#FEDB87") : Colors.grey),
-                                border: const GradientBoxBorder(
-                                  gradient: LinearGradient(colors: [Color(0xffFEDB87),Color(0xffBD7923),Color(0xffFEDB87)],),
-                                  width: 1,
-                                ),
+                              border: Border.all(color: landingdata_starline[index]["status"]!="closed" ? HexColor(globals.color_blue) : Colors.grey),
+                              //   border: const GradientBoxBorder(
+                              //     gradient: LinearGradient(colors: [Color(0xffFEDB87),Color(0xffBD7923),Color(0xffFEDB87)],),
+                              //     width: 1,
+                              //   ),
                                 borderRadius: BorderRadius.circular(8),
-                                color: Colors.black,
+                                color: HexColor(globals.color_background),
                             ),
                             child: Column(
                               children: [
                                 SizedBox(height: 5,),
-                                landingdata_starline[index]["status"]!="closed" ? GradientText(landingdata_starline[index]["prov_name"],style: TextStyle(fontWeight: FontWeight.w900, fontSize: 18),) : Text(landingdata_starline[index]["prov_name"],style: TextStyle(color:Colors.grey,fontWeight: FontWeight.w900, fontSize: 18),),
+                                landingdata_starline[index]["status"]!="closed" ? Text(landingdata_starline[index]["prov_name"],style: TextStyle(fontWeight: FontWeight.w900, fontSize: 18,color: Colors.white70),) : Text(landingdata_starline[index]["prov_name"],style: TextStyle(color:Colors.grey,fontWeight: FontWeight.w900, fontSize: 18),),
                                 SizedBox(height: 15,),
-                                landingdata_starline[index]["status"]!="closed" ? GradientText(landingdata_starline[index]["prov_result"],style: TextStyle(fontWeight: FontWeight.w900, fontSize: 20),) : Text(landingdata_starline[index]["prov_result"],style: TextStyle(color:Colors.grey,fontWeight: FontWeight.w900, fontSize: 20),),
+                                landingdata_starline[index]["status"]!="closed" ? Text(landingdata_starline[index]["prov_result"],style: TextStyle(fontWeight: FontWeight.w900, fontSize: 20,color: Colors.white70),) : Text(landingdata_starline[index]["prov_result"],style: TextStyle(color:Colors.grey,fontWeight: FontWeight.w900, fontSize: 20),),
                                 SizedBox(height: 10,),
                                 RichText(
                                     text: TextSpan(
                                         style: TextStyle(color: Colors.black),
                                         children: [
-                                          TextSpan(text: "Bid Open: ", style: TextStyle(color: landingdata_starline[index]["status"]!="closed" ? Colors.white : Colors.grey, fontWeight: FontWeight.bold,fontSize: 10)),
-                                          TextSpan(text: landingdata_starline[index]["open_time"], style: TextStyle(fontWeight: FontWeight.bold,color: landingdata_starline[index]["status"]!="closed" ? Colors.white : Colors.grey,fontSize: 10 )),
+                                          TextSpan(text: "Bid Starts At: ", style: TextStyle(color: landingdata_starline[index]["status"]!="closed" ? Colors.white70 : Colors.grey, fontWeight: FontWeight.bold,fontSize: 10)),
+                                          TextSpan(text: landingdata_starline[index]["open_time"], style: TextStyle(fontWeight: FontWeight.bold,color: landingdata_starline[index]["status"]!="closed" ? Colors.white70 : Colors.grey,fontSize: 10 )),
                                         ]
                                     )),
                                 SizedBox(height: 5,),
@@ -310,27 +312,27 @@ class _StarlinemarketsState extends State<Starlinemarkets> {
                                     text: TextSpan(
                                         style: TextStyle(color: Colors.black),
                                         children: [
-                                          TextSpan(text: "Bid Close: ", style: TextStyle(color: landingdata_starline[index]["status"]!="closed" ? Colors.white : Colors.grey, fontWeight: FontWeight.bold,fontSize: 10)),
-                                          TextSpan(text: landingdata_starline[index]["close_time"], style: TextStyle(fontWeight: FontWeight.bold,color: landingdata_starline[index]["status"]!="closed" ? Colors.white : Colors.grey,fontSize: 10))
+                                          TextSpan(text: "Bid Closes On: ", style: TextStyle(color: landingdata_starline[index]["status"]!="closed" ? Colors.white70 : Colors.grey, fontWeight: FontWeight.bold,fontSize: 10)),
+                                          TextSpan(text: landingdata_starline[index]["close_time"], style: TextStyle(fontWeight: FontWeight.bold,color: landingdata_starline[index]["status"]!="closed" ? Colors.white70 : Colors.grey,fontSize: 10))
                                         ]
                                     )),
-                                SizedBox(height: 4,),
-                                landingdata_starline[index]["status"]!="closed" ? Container(
-                                  width: double.infinity,
-                                  height: 31,
-                                  alignment: Alignment.center,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.only(bottomLeft: Radius.circular(7),bottomRight: Radius.circular(7)),
-                                    gradient: LinearGradient(
-                                        begin: Alignment.topCenter,
-                                        end: Alignment.bottomCenter,
-                                        colors: <Color>[
-                                          HexColor("#FEDB87"),
-                                          HexColor("#BD7923"),
-                                          HexColor("#FEDB87"),]),
-                                  ),
-                                  child: Text("Play Game",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
-                                ) : Container(),
+                                // SizedBox(height: 4,),
+                                // landingdata_starline[index]["status"]!="closed" ? Container(
+                                //   width: double.infinity,
+                                //   height: 31,
+                                //   alignment: Alignment.center,
+                                //   decoration: BoxDecoration(
+                                //     borderRadius: BorderRadius.only(bottomLeft: Radius.circular(7),bottomRight: Radius.circular(7)),
+                                //     gradient: LinearGradient(
+                                //         begin: Alignment.topCenter,
+                                //         end: Alignment.bottomCenter,
+                                //         colors: <Color>[
+                                //           HexColor("#FEDB87"),
+                                //           HexColor("#BD7923"),
+                                //           HexColor("#FEDB87"),]),
+                                //   ),
+                                //   child: Text("Play Game",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
+                                // ) : Container(),
                               ],
                             ),
                           ),

@@ -79,7 +79,7 @@ class _HistoryTabState extends State<HistoryTab> with SingleTickerProviderStateM
                 controller: _tabController,
                 // give the indicator a decoration (color and border radius)
                 indicator: BoxDecoration(
-                  gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [Color(0xffFEDB87),Color(0xffBD7923),Color(0xffFEDB87)],),
+                  gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [HexColor(globals.color_blue),HexColor(globals.color_pink)],),
                   borderRadius: BorderRadius.circular(
                     25.0,
                   ),

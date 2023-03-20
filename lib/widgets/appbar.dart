@@ -31,7 +31,11 @@ class _AppbarState extends State<Appbar> {
         backgroundColor: HexColor(globals.color_pink),
         flexibleSpace: Container(
           decoration: BoxDecoration(
-              color: HexColor(globals.color_background)
+              color: HexColor(globals.color_background),
+              boxShadow: [new BoxShadow(
+                color: HexColor(globals.color_blue),
+                blurRadius: 20.0,
+              ),]
             /*gradient: LinearGradient(
                   begin: Alignment.center,
                   end: Alignment.bottomCenter,

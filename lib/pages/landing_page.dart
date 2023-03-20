@@ -1,3 +1,4 @@
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:wingame/globalvar.dart' as globals;
 import 'package:wingame/pages/chat.dart';
 import 'package:wingame/pages/main_markets.dart';
@@ -32,7 +33,7 @@ class _LandingPageState extends State<LandingPage> with TickerProviderStateMixin
   @override
   void initState() {
     super.initState();
-    _controller = TabController(length: 3, vsync: this);
+    _controller = TabController(length: 2, vsync: this);
     _controller.animateTo((globals.tabval));
     globals.tabval = 0;
     back_count = 0;
@@ -122,10 +123,14 @@ class _LandingPageState extends State<LandingPage> with TickerProviderStateMixin
       onWillPop: showExitPopup,
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: HexColor(globals.color_pink),
+          backgroundColor: Colors.transparent,
           flexibleSpace: Container(
             decoration: BoxDecoration(
-              color: HexColor(globals.color_background)
+              color: HexColor(globals.color_background),
+                boxShadow: [new BoxShadow(
+                  color: HexColor(globals.color_blue),
+                  blurRadius: 20.0,
+                ),]
               /*gradient: LinearGradient(
                   begin: Alignment.center,
                   end: Alignment.bottomCenter,
@@ -177,19 +182,19 @@ class _LandingPageState extends State<LandingPage> with TickerProviderStateMixin
           ],
         ),
         drawer: AppDrawer(),
-        /*bottomNavigationBar: BottomNavigationBar(
+        bottomNavigationBar: BottomNavigationBar(
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: Icon(Icons.home),
               label: 'Home',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.chat_bubble_outline),
+              icon: Icon(FontAwesomeIcons.whatsapp),
               label: 'Support',
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.history),
-              label: 'Bidding',
+              label: 'History',
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.wallet),
@@ -200,15 +205,16 @@ class _LandingPageState extends State<LandingPage> with TickerProviderStateMixin
               label: 'Profile',
             ),
           ],
+          backgroundColor: HexColor(globals.color_background),
           currentIndex: _selectedIndex,
-          unselectedItemColor:HexColor("#FEDB87"),
-          unselectedLabelStyle: TextStyle(color: HexColor("#FEDB87"), fontSize: 13),
+          unselectedItemColor:Colors.white70,
+          unselectedLabelStyle: TextStyle(color: Colors.white12, fontSize: 13),
           showUnselectedLabels: true,
-          selectedItemColor: Colors.amber[800],
+          selectedItemColor: HexColor(globals.color_green),
           onTap: _onItemTapped,
           type: BottomNavigationBarType.fixed,
 
-        ),*/
+        ),
         body: Container(
           color: HexColor(globals.color_background),
           child: Column(
@@ -241,20 +247,20 @@ class _LandingPageState extends State<LandingPage> with TickerProviderStateMixin
                 labelStyle: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
                 tabs: [
                   Tab(
-                    text: "Market",
+                    text: "Maingame",
                   ),
                   Tab(
                     text: "Starline",
                   ),
-                  Tab(
-                    text: "SuperJodi",
-                  ),
+                  // Tab(
+                  //   text: "SuperJodi",
+                  // ),
                 ],
               ),
               Expanded(
                   child: TabBarView(
                 controller: _controller,
-                children: [MainMarkets(), Starlinemarkets(),Superjodi()],
+                children: [MainMarkets(), Starlinemarkets()],
               ))
             ],
           ),

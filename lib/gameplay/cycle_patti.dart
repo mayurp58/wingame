@@ -3,7 +3,7 @@ import 'package:wingame/widgets/GradientText.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hexcolor/hexcolor.dart';
-
+import 'package:wingame/globalvar.dart' as globals;
 import '../common/theme_helper.dart';
 import '../widgets/appbar.dart';
 import 'gameplay_header.dart';
@@ -63,11 +63,14 @@ class _CyclePattiState extends State<CyclePatti> {
             Container(
               //height: ,
               width: double.infinity,
+              decoration: BoxDecoration(
+                  color: Colors.black
+              ),
               child: Card(
-                color: Colors.black,
-                elevation: 20, //shadow elevation for card
-                margin: EdgeInsets.all(8),
-                shadowColor: HexColor("#FEDB87"),
+                color: HexColor(globals.color_background),
+                elevation: 10, //shadow elevation for card
+                margin: EdgeInsets.all(2),
+                shadowColor:  HexColor(globals.color_blue),
                 child: Column(
                   children: [
 
@@ -186,7 +189,7 @@ class _CyclePattiState extends State<CyclePatti> {
                             SizedBox(height: 40,),
 
                             GradientText("Bet Patties : " + bet_patties, ),
-                            SizedBox(height: 40,),
+                            SizedBox(height: 340,),
                           ],
                         ),
 

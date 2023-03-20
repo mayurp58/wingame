@@ -53,14 +53,14 @@ class _BidHistoryState extends State<BidHistory> {
         itemCount: marketnames.length,
         itemBuilder: (context, index) {
           return Card(
-            color: Colors.black,
+            color: Colors.transparent,
             child: Padding(
               padding: const EdgeInsets.all(3.0),
               child: Container(
                 decoration: BoxDecoration(
-                  color: Colors.black,
+                  color: Colors.black12,
                   border: const GradientBoxBorder(
-                    gradient: LinearGradient(colors: [Color(0xffFEDB87),Color(0xffBD7923),Color(0xffFEDB87)],),
+                    gradient: LinearGradient(colors: [Color(0xffff66c4),Color(0xff514ed8),Color(0xffff66c4)],),
                     width: 1,
                   ),
 
@@ -69,6 +69,7 @@ class _BidHistoryState extends State<BidHistory> {
                 //padding: EdgeInsets.fromLTRB(20, 15, 20, 15),
                 //margin: EdgeInsets.fromLTRB(20, 70, 20, 10),
                 child: ListTile(
+                  tileColor: HexColor(globals.color_background),
                   title: Center(
                     child: GradientText(marketnames[index]["prov_name"], style: TextStyle(fontWeight: FontWeight.w600,color: HexColor("#FEDB87"))
                     ),

@@ -75,19 +75,19 @@ class _StarlineDoublePannaState extends State<StarlineDoublePanna> with SingleTi
                 padding: EdgeInsets.all(5),
                 decoration: BoxDecoration(
                   border: GradientBoxBorder(
-                    gradient: LinearGradient(colors: [Color(0xffFEDB87),Color(0xffBD7923),Color(0xffFEDB87)],),
+                    gradient: LinearGradient(colors: [HexColor(globals.color_pink),HexColor(globals.color_blue)],),
                     width: 1,
                   ),
                   borderRadius: BorderRadius.circular(5),
                 ),
                 child: TabBar(
                     isScrollable: true,
-                    labelColor: Colors.black,
+                    labelColor: Colors.white,
                     unselectedLabelColor: Colors.white,
                     indicatorSize: TabBarIndicatorSize.tab,
                     indicator: BoxDecoration(
                         gradient: LinearGradient(
-                            colors: [Color(0xffFEDB87),Color(0xffBD7923),Color(0xffFEDB87)]),
+                            colors: [HexColor(globals.color_pink),HexColor(globals.color_blue)]),
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.black),
                     tabs: [
@@ -161,11 +161,14 @@ class _StarlineDoublePannaState extends State<StarlineDoublePanna> with SingleTi
     return Container(
       //height: ,
       width: double.infinity,
+      decoration: BoxDecoration(
+          color: Colors.black
+      ),
       child: Card(
-        color: Colors.black,
-        elevation: 20, //shadow elevation for card
-        margin: EdgeInsets.all(8),
-        shadowColor: HexColor("#FEDB87"),
+        color: HexColor(globals.color_background),
+        elevation: 10, //shadow elevation for card
+        margin: EdgeInsets.all(2),
+        shadowColor:  HexColor(globals.color_blue),
         child: Column(
           children: [
             Padding(

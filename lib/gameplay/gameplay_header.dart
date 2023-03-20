@@ -70,10 +70,10 @@ class _GameplayHeaderState extends State<GameplayHeader> {
       height: 110,
       width: double.infinity,
       child: Card(
-        color: Colors.black,
+        color: HexColor(globals.color_background),
         elevation: 20, //shadow elevation for card
-        margin: EdgeInsets.all(8),
-        shadowColor: HexColor("#FEDB87"),
+        margin: EdgeInsets.all(2),
+        shadowColor: HexColor(globals.color_blue),
         child: Column(
           children: [
 
@@ -88,8 +88,8 @@ class _GameplayHeaderState extends State<GameplayHeader> {
                   padding: EdgeInsets.fromLTRB(20, 15, 20, 0),
                   child: RichText(text: TextSpan(
                     children: [
-                      WidgetSpan(child: Icon(Icons.calendar_month,color: HexColor("#FEDB87"),size: 15,)),
-                      TextSpan(text: widget.date.toString(), style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold,color: HexColor("#FEDB87")),),
+                      WidgetSpan(child: Icon(Icons.calendar_month,color: HexColor(globals.color_pink),size: 15,)),
+                      TextSpan(text: widget.date.toString(), style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold,color: HexColor(globals.color_pink)),),
                     ],
                   ),
                   ),
@@ -97,10 +97,10 @@ class _GameplayHeaderState extends State<GameplayHeader> {
 
                 Padding(
                   padding: EdgeInsets.fromLTRB(20, 15, 20, 0),
-                  child: (widget.session.toString()=="") ? Text(widget.type.toString()) : RichText(text: TextSpan(
+                  child: (widget.session.toString()=="") ? Text(widget.type.toString(),style: TextStyle(color: HexColor(globals.color_pink)),) : RichText(text: TextSpan(
                     children: [
-                      WidgetSpan(child: Icon(Icons.watch_later_outlined,color: HexColor("#FEDB87"),size: 15,)),
-                      TextSpan(text: widget.session.toString().toUpperCase(), style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold,color:HexColor("#FEDB87")),),
+                      WidgetSpan(child: Icon(Icons.watch_later_outlined,color: HexColor(globals.color_pink),size: 15,)),
+                      TextSpan(text: widget.session.toString().toUpperCase(), style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold,color:HexColor(globals.color_pink)),),
                     ],
                   ),
                   ),

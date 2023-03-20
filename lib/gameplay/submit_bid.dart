@@ -48,13 +48,18 @@ class _SubmitBidState extends State<SubmitBid> {
         centerTitle: true,
         flexibleSpace: Container(
           decoration: BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: <Color>[
-                  HexColor("#FEDB87"),
-                  HexColor("#BD7923"),
-                  HexColor("#FEDB87"),]),
+              color: HexColor(globals.color_background),
+              boxShadow: [new BoxShadow(
+                color: HexColor(globals.color_blue),
+                blurRadius: 20.0,
+              ),]
+            // gradient: LinearGradient(
+            //     begin: Alignment.topCenter,
+            //     end: Alignment.bottomCenter,
+            //     colors: <Color>[
+            //       HexColor("#FEDB87"),
+            //       HexColor("#BD7923"),
+            //       HexColor("#FEDB87"),]),
           ),
         ),
         leading: IconButton(
@@ -81,7 +86,7 @@ class _SubmitBidState extends State<SubmitBid> {
                 child: Container(
                   decoration: BoxDecoration(
                     border: const GradientBoxBorder(
-                      gradient: LinearGradient(colors: [Color(0xffFEDB87),Color(0xffBD7923),Color(0xffFEDB87)],),
+                      gradient: LinearGradient(colors: [Color(0xffff66c4),Color(0xff514ed8)],),
                       width: 1,
                     ),
                     borderRadius: BorderRadius.circular(8),
@@ -100,9 +105,8 @@ class _SubmitBidState extends State<SubmitBid> {
                                 begin: Alignment.topCenter,
                                 end: Alignment.bottomCenter,
                                 colors: <Color>[
-                                  HexColor("#FEDB87"),
-                                  HexColor("#BD7923"),
-                                  HexColor("#FEDB87"),]),
+                                  HexColor(globals.color_pink),
+                                  HexColor(globals.color_blue),]),
                             borderRadius: BorderRadius.only(
                                 topRight: Radius.circular(0),
                                 bottomRight: Radius.circular(0),
@@ -114,7 +118,7 @@ class _SubmitBidState extends State<SubmitBid> {
                           child: Column(
                             children: [
                               SizedBox(height: 5,),
-                              Image.asset(widget.image.toString(),height: 30,),
+                              Image.asset("assets/"+widget.image.toString(),height: 30,),
                               SizedBox(height: 5,),
                               Text(widget.game_name.toString(),textAlign: TextAlign.center, style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500,color: Colors.white),)
                             ],
@@ -173,12 +177,12 @@ class _SubmitBidState extends State<SubmitBid> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text("Total Points",style: TextStyle(color: HexColor("#FEDB87"),fontWeight: FontWeight.bold),),
+                          Text("Total Points",style: TextStyle(color: HexColor(globals.color_pink),fontWeight: FontWeight.bold),),
                           RichText(
                             text: TextSpan(
                               children: [
-                                WidgetSpan(child: Icon(Icons.currency_rupee,color: HexColor("#FEDB87"),size: 14,)),
-                                TextSpan(text: widget.total.toString(), style: TextStyle(fontWeight: FontWeight.bold,color: HexColor("#FEDB87")),),
+                                WidgetSpan(child: Icon(Icons.currency_rupee,color: HexColor(globals.color_pink),size: 14,)),
+                                TextSpan(text: widget.total.toString(), style: TextStyle(fontWeight: FontWeight.bold,color: HexColor(globals.color_pink)),),
                               ],
                             ),),
                           //Text(widget.total.toString(),style: TextStyle(color: HexColor("#FEDB87"),fontWeight: FontWeight.bold),),

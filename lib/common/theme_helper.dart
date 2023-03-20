@@ -136,7 +136,7 @@ class ThemeHelper{
       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
         RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(30.0),
-            side: BorderSide(color: HexColor("#FEDB87")),
+            side: BorderSide(color: HexColor(globals.color_pink)),
         ),
       ),
       minimumSize: MaterialStateProperty.all(Size(50, 50)),
@@ -163,7 +163,7 @@ class ThemeHelper{
       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
         RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(7.0),
-            side: BorderSide(color: HexColor("#FEDB87"))
+            side: BorderSide(color: HexColor(globals.color_pink))
         ),
       ),
       minimumSize: MaterialStateProperty.all(Size(40, 40)),

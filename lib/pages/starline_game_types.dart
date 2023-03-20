@@ -66,13 +66,18 @@ class _StarlineGameTypesState extends State<StarlineGameTypes> {
         centerTitle: true,
         flexibleSpace: Container(
           decoration: BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: <Color>[
-                  HexColor("#FEDB87"),
-                  HexColor("#BD7923"),
-                  HexColor("#FEDB87"),]),
+              color: HexColor(globals.color_background),
+                  boxShadow: [new BoxShadow(
+          color: HexColor(globals.color_blue),
+            blurRadius: 20.0,
+          ),]
+            // gradient: LinearGradient(
+            //     begin: Alignment.topCenter,
+            //     end: Alignment.bottomCenter,
+            //     colors: <Color>[
+            //       HexColor("#FEDB87"),
+            //       HexColor("#BD7923"),
+            //       HexColor("#FEDB87"),]),
           ),
         ),
         backgroundColor: HexColor("#FEDB87"),
@@ -103,7 +108,7 @@ class _StarlineGameTypesState extends State<StarlineGameTypes> {
                     child: Container(
                         decoration: BoxDecoration(
                           color: HexColor("#000000"),
-                          gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [Color(0xffFEDB87),Color(0xffBD7923),Color(0xffFEDB87)],),
+                          gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [HexColor(globals.color_blue),HexColor(globals.color_pink)],),
                           borderRadius: BorderRadius.all(Radius.circular(15)),
                         ),
                         padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
@@ -125,7 +130,7 @@ class _StarlineGameTypesState extends State<StarlineGameTypes> {
                       margin: EdgeInsets.fromLTRB(10, 0, 0, 0),
                       padding: EdgeInsets.fromLTRB(8, 0, 8, 0),
                       decoration: BoxDecoration(
-                        gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [Color(0xffFEDB87),Color(0xffBD7923),Color(0xffFEDB87)],),
+                        gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [HexColor(globals.color_blue),HexColor(globals.color_pink)],),
                         border: Border.all(color: HexColor("#000000")),
                         borderRadius: BorderRadius.circular(8),
                         color: Colors.white,
@@ -146,7 +151,7 @@ class _StarlineGameTypesState extends State<StarlineGameTypes> {
                           child: Column(
                             children: [
                               SizedBox(height: 5,),
-                              Image.asset("single_digit.png", height: 40,),
+                              Image.asset("assets/single_digit.png", height: 40,),
                               SizedBox(height: 5,),
                               Text("Single\nDigit", textAlign: TextAlign.center,
                                 style: TextStyle(fontSize: 12,
@@ -166,7 +171,7 @@ class _StarlineGameTypesState extends State<StarlineGameTypes> {
                     child: Container(
                         decoration: BoxDecoration(
                           color: HexColor("#FEDB87"),
-                          gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [Color(0xffFEDB87),Color(0xffBD7923),Color(0xffFEDB87)],),
+                          gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [HexColor(globals.color_blue),HexColor(globals.color_pink)],),
                           borderRadius: BorderRadius.all(Radius.circular(15)),
                         ),
                         padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
@@ -187,7 +192,7 @@ class _StarlineGameTypesState extends State<StarlineGameTypes> {
                     padding: EdgeInsets.fromLTRB(8, 0, 8, 0),
                     decoration: BoxDecoration(
                       border: Border.all(color: HexColor("#000000")),
-                      gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [Color(0xffFEDB87),Color(0xffBD7923),Color(0xffFEDB87)],),
+                      gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [HexColor(globals.color_blue),HexColor(globals.color_pink)],),
                       borderRadius: BorderRadius.circular(8),
                       color: Colors.white,
                       boxShadow: [
@@ -207,7 +212,7 @@ class _StarlineGameTypesState extends State<StarlineGameTypes> {
                         child: Column(
                           children: [
                             SizedBox(height: 5,),
-                            Image.asset("single_panna.png", height: 40,),
+                            Image.asset("assets/single_panna.png", height: 40,),
                             SizedBox(height: 5,),
                             Text("Single Panna", textAlign: TextAlign.center,
                               style: TextStyle(fontSize: 12,
@@ -225,7 +230,7 @@ class _StarlineGameTypesState extends State<StarlineGameTypes> {
                     padding: EdgeInsets.fromLTRB(8, 0, 8, 0),
                     decoration: BoxDecoration(
                       border: Border.all(color: HexColor("#000000")),
-                      gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [Color(0xffFEDB87),Color(0xffBD7923),Color(0xffFEDB87)],),
+                      gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [HexColor(globals.color_blue),HexColor(globals.color_pink)],),
                       borderRadius: BorderRadius.circular(8),
                       color: Colors.white,
                       boxShadow: [
@@ -245,7 +250,7 @@ class _StarlineGameTypesState extends State<StarlineGameTypes> {
                         child: Column(
                           children: [
                             SizedBox(height: 5,),
-                            Image.asset("double_panna.png", height: 40,),
+                            Image.asset("assets/double_panna.png", height: 40,),
                             SizedBox(height: 5,),
                             Text("Double Panna", textAlign: TextAlign.center,
                               style: TextStyle(fontSize: 12,
@@ -263,7 +268,7 @@ class _StarlineGameTypesState extends State<StarlineGameTypes> {
                     padding: EdgeInsets.fromLTRB(8, 0, 8, 0),
                     decoration: BoxDecoration(
                       border: Border.all(color: HexColor("#000000")),
-                      gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [Color(0xffFEDB87),Color(0xffBD7923),Color(0xffFEDB87)],),
+                      gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [HexColor(globals.color_blue),HexColor(globals.color_pink)],),
                       borderRadius: BorderRadius.circular(8),
                       color: Colors.white,
                       boxShadow: [
@@ -283,7 +288,7 @@ class _StarlineGameTypesState extends State<StarlineGameTypes> {
                         child: Column(
                           children: [
                             SizedBox(height: 5,),
-                            Image.asset("tripple_panna.png", height: 40,),
+                            Image.asset("assets/tripple_panna.png", height: 40,),
                             SizedBox(height: 5,),
                             Text("Triple Panna", textAlign: TextAlign.center,
                               style: TextStyle(fontSize: 12,
@@ -300,7 +305,7 @@ class _StarlineGameTypesState extends State<StarlineGameTypes> {
                     height: 80,
                     padding: EdgeInsets.fromLTRB(8, 0, 8, 0),
                     decoration: BoxDecoration(
-                      gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [Color(0xffFEDB87),Color(0xffBD7923),Color(0xffFEDB87)],),
+                      gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [HexColor(globals.color_blue),HexColor(globals.color_pink)],),
                       border: Border.all(color: HexColor("#000000")),
                       borderRadius: BorderRadius.circular(8),
                       color: Colors.white,
@@ -321,7 +326,7 @@ class _StarlineGameTypesState extends State<StarlineGameTypes> {
                         child: Column(
                           children: [
                             SizedBox(height: 5,),
-                            Image.asset("spdptp.png", height: 40,),
+                            Image.asset("assets/spdptp.png", height: 40,),
                             SizedBox(height: 5,),
                             Text("Sp-Dp-Tp", textAlign: TextAlign.center,
                               style: TextStyle(fontSize: 12,
@@ -343,7 +348,7 @@ class _StarlineGameTypesState extends State<StarlineGameTypes> {
                     height: 80,
                     padding: EdgeInsets.fromLTRB(8, 0, 8, 0),
                     decoration: BoxDecoration(
-                      gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [Color(0xffFEDB87),Color(0xffBD7923),Color(0xffFEDB87)],),
+                      gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [HexColor(globals.color_blue),HexColor(globals.color_pink)],),
                       border: Border.all(color: HexColor("#000000")),
                       borderRadius: BorderRadius.circular(8),
                       color: Colors.white,
@@ -364,7 +369,7 @@ class _StarlineGameTypesState extends State<StarlineGameTypes> {
                         child: Column(
                           children: [
                             SizedBox(height: 5,),
-                            Image.asset("tow_digit_panel.png", height: 40,),
+                            Image.asset("assets/tow_digit_panel.png", height: 40,),
                             SizedBox(height: 5,),
                             Text("Two Digit Panel", textAlign: TextAlign.center,
                               style: TextStyle(fontSize: 12,
@@ -382,7 +387,7 @@ class _StarlineGameTypesState extends State<StarlineGameTypes> {
                     padding: EdgeInsets.fromLTRB(8, 0, 8, 0),
                     decoration: BoxDecoration(
                       border: Border.all(color: HexColor("#000000")),
-                      gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [Color(0xffFEDB87),Color(0xffBD7923),Color(0xffFEDB87)],),
+                      gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [HexColor(globals.color_blue),HexColor(globals.color_pink)],),
                       borderRadius: BorderRadius.circular(8),
                       color: Colors.white,
                       boxShadow: [
@@ -402,7 +407,7 @@ class _StarlineGameTypesState extends State<StarlineGameTypes> {
                         child: Column(
                           children: [
                             SizedBox(height: 5,),
-                            Image.asset("panel_group.png", height: 40,),
+                            Image.asset("assets/panel_group.png", height: 40,),
                             SizedBox(height: 5,),
                             Text("Family Panna", textAlign: TextAlign.center,
                               style: TextStyle(fontSize: 12,
@@ -420,7 +425,7 @@ class _StarlineGameTypesState extends State<StarlineGameTypes> {
                     padding: EdgeInsets.fromLTRB(8, 0, 8, 0),
                     decoration: BoxDecoration(
                       border: Border.all(color: HexColor("#000000")),
-                      gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [Color(0xffFEDB87),Color(0xffBD7923),Color(0xffFEDB87)],),
+                      gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [HexColor(globals.color_blue),HexColor(globals.color_pink)],),
                       borderRadius: BorderRadius.circular(8),
                       color: Colors.white,
                       boxShadow: [
@@ -440,7 +445,7 @@ class _StarlineGameTypesState extends State<StarlineGameTypes> {
                         child: Column(
                           children: [
                             SizedBox(height: 5,),
-                            Image.asset("choice_panna.png", height: 40,),
+                            Image.asset("assets/choice_panna.png", height: 40,),
                             SizedBox(height: 5,),
                             Text("Choice Panna", textAlign: TextAlign.center,
                               style: TextStyle(fontSize: 12,
@@ -458,7 +463,7 @@ class _StarlineGameTypesState extends State<StarlineGameTypes> {
                     padding: EdgeInsets.fromLTRB(8, 0, 8, 0),
                     decoration: BoxDecoration(
                       border: Border.all(color: HexColor("#000000")),
-                      gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [Color(0xffFEDB87),Color(0xffBD7923),Color(0xffFEDB87)],),
+                      gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [HexColor(globals.color_blue),HexColor(globals.color_pink)],),
                       borderRadius: BorderRadius.circular(8),
                       color: Colors.white,
                       boxShadow: [
@@ -478,7 +483,7 @@ class _StarlineGameTypesState extends State<StarlineGameTypes> {
                         child: Column(
                           children: [
                             SizedBox(height: 5,),
-                            Image.asset("cycle_patti.png", height: 40,),
+                            Image.asset("assets/cycle_patti.png", height: 40,),
                             SizedBox(height: 5,),
                             Text("Cycle Patti", textAlign: TextAlign.center,
                               style: TextStyle(fontSize: 12,
@@ -498,7 +503,7 @@ class _StarlineGameTypesState extends State<StarlineGameTypes> {
                     padding: EdgeInsets.all(20),
                     child: Container(
                         decoration: BoxDecoration(
-                          gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [Color(0xffFEDB87),Color(0xffBD7923),Color(0xffFEDB87)],),
+                          gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [HexColor(globals.color_blue),HexColor(globals.color_pink)],),
                           color: HexColor("#FEDB87"),
                           borderRadius: BorderRadius.all(Radius.circular(15)),
                         ),
@@ -520,7 +525,7 @@ class _StarlineGameTypesState extends State<StarlineGameTypes> {
                     padding: EdgeInsets.fromLTRB(8, 0, 8, 0),
                     decoration: BoxDecoration(
                       border: Border.all(color: HexColor("#000000")),
-                      gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [Color(0xffFEDB87),Color(0xffBD7923),Color(0xffFEDB87)],),
+                      gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [HexColor(globals.color_blue),HexColor(globals.color_pink)],),
                       borderRadius: BorderRadius.circular(8),
                       color: Colors.white,
                       boxShadow: [
@@ -540,7 +545,7 @@ class _StarlineGameTypesState extends State<StarlineGameTypes> {
                         child: Column(
                           children: [
                             SizedBox(height: 5,),
-                            Image.asset("sp_motor.png", height: 40,),
+                            Image.asset("assets/sp_motor.png", height: 40,),
                             SizedBox(height: 5,),
                             Text("SP Motor", textAlign: TextAlign.center,
                               style: TextStyle(fontSize: 12,
@@ -558,7 +563,7 @@ class _StarlineGameTypesState extends State<StarlineGameTypes> {
                     padding: EdgeInsets.fromLTRB(8, 0, 8, 0),
                     decoration: BoxDecoration(
                       border: Border.all(color: HexColor("#000000")),
-                      gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [Color(0xffFEDB87),Color(0xffBD7923),Color(0xffFEDB87)],),
+                      gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [HexColor(globals.color_blue),HexColor(globals.color_pink)],),
                       borderRadius: BorderRadius.circular(8),
                       color: Colors.white,
                       boxShadow: [
@@ -578,7 +583,7 @@ class _StarlineGameTypesState extends State<StarlineGameTypes> {
                         child: Column(
                           children: [
                             SizedBox(height: 5,),
-                            Image.asset("dp_motor.png", height: 40,),
+                            Image.asset("assets/dp_motor.png", height: 40,),
                             SizedBox(height: 5,),
                             Text("DP Motor", textAlign: TextAlign.center,
                               style: TextStyle(fontSize: 12,

@@ -100,7 +100,6 @@ flutter:
     - assets/tripple_panna.png
     - assets/cycle_patti.png
     - assets/logo.png
-    - assets/banner.png
     - assets/wingame.gif
   # To add assets to your application, add an assets section, like this:
   # assets:
