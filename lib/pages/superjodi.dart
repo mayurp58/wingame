@@ -271,7 +271,7 @@ class _SuperjodiState extends State<Superjodi> {
                           {
                             var snackBar = SnackBar(
                               content: Text("Market Closed"),
-                              backgroundColor: HexColor("#FEDB87"),
+                              backgroundColor: HexColor(globals.color_blue),
                             );
                             ScaffoldMessenger.of(context).showSnackBar(snackBar);
                           }
@@ -279,7 +279,7 @@ class _SuperjodiState extends State<Superjodi> {
                         child: Container(
                           margin: EdgeInsets.all(4),
                           decoration: BoxDecoration(
-                            //border: Border.all(color: landingdata[index]["status"]!="closed" ? HexColor("#FEDB87") : Colors.grey),
+                            //border: Border.all(color: landingdata[index]["status"]!="closed" ? HexColor(globals.color_blue) : Colors.grey),
                             border: const GradientBoxBorder(
                               gradient: LinearGradient(colors: [Color(0xffFEDB87),Color(0xffBD7923),Color(0xffFEDB87)],),
                               width: 1,
@@ -322,9 +322,9 @@ class _SuperjodiState extends State<Superjodi> {
                                       begin: Alignment.topCenter,
                                       end: Alignment.bottomCenter,
                                       colors: <Color>[
-                                        HexColor("#FEDB87"),
+                                        HexColor(globals.color_blue),
                                         HexColor("#BD7923"),
-                                        HexColor("#FEDB87"),]),
+                                        HexColor(globals.color_blue),]),
                                 ),
                                 child: Text("Play Game",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
                               ) : Container(),

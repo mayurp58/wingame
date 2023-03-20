@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:wingame/loader.dart';
 import 'package:wingame/common/api_service.dart';
 import 'dart:convert';
-import 'dart:async';
+import 'package:wingame/globalvar.dart' as globals;
 import 'package:wingame/widgets/appbar.dart';
 import 'package:wingame/widgets/navigationbar.dart';
 import 'package:back_button_interceptor/back_button_interceptor.dart';
@@ -100,7 +100,7 @@ class _NoticeBoardState extends State<NoticeBoard> {
                 return Card(
                   elevation: 10, //shadow elevation for card
                   margin: EdgeInsets.all(8),
-                  shadowColor: HexColor("#FEDB87"),
+                  shadowColor: HexColor(globals.color_blue),
                   child: Padding(
                     padding: EdgeInsets.all(25),
                     child: Column(

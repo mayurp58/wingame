@@ -3,7 +3,6 @@ import 'dart:convert';
 import 'package:wingame/common/api_service.dart';
 import 'package:wingame/loader.dart';
 import 'package:wingame/pages/login_page.dart';
-import 'package:wingame/widgets/GradientText.dart';
 import 'package:back_button_interceptor/back_button_interceptor.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -33,6 +32,7 @@ class _StarlineTermsState extends State<StarlineTerms> {
         setState(() {
           isApiCallProcess = false;
         });
+        print(responseJson["data"]);
         how_to_play = responseJson["data"];
       }
       else
@@ -79,16 +79,21 @@ class _StarlineTermsState extends State<StarlineTerms> {
       backgroundColor: HexColor(globals.color_background),
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: HexColor("#FEDB87"),
+        backgroundColor: HexColor(globals.color_blue),
         flexibleSpace: Container(
           decoration: BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: <Color>[
-                  HexColor("#FEDB87"),
-                  HexColor("#BD7923"),
-                  HexColor("#FEDB87"),]),
+              color: HexColor(globals.color_background),
+              boxShadow: [new BoxShadow(
+                color: HexColor(globals.color_blue),
+                blurRadius: 20.0,
+              ),]
+            // gradient: LinearGradient(
+            //     begin: Alignment.topCenter,
+            //     end: Alignment.bottomCenter,
+            //     colors: <Color>[
+            //       HexColor(globals.color_blue),
+            //       HexColor("#BD7923"),
+            //       HexColor(globals.color_blue),]),
           ),
         ),
         leading: IconButton(
@@ -114,14 +119,7 @@ class _StarlineTermsState extends State<StarlineTerms> {
                   SizedBox(
                     height: 30,
                   ),
-                  Center(
-                    child: GradientText(
-                      'Terms & Conditions',
-                      //textAlign: TextAlign.center,
-                      style:
-                      TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                    ),
-                  ),
+
                   SizedBox(height: 50.0),
                   Center(
                     child: Text(

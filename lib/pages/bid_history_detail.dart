@@ -116,12 +116,12 @@ class _BidDetailsState extends State<BidDetails> {
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: <Color>[
-                  HexColor("#FEDB87"),
+                  HexColor(globals.color_blue),
                   HexColor("#BD7923"),
-                  HexColor("#FEDB87"),]),
+                  HexColor(globals.color_blue),]),
           ),
         ),
-        backgroundColor: HexColor("#FEDB87"),
+        backgroundColor: HexColor(globals.color_blue),
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
@@ -166,12 +166,12 @@ class _BidDetailsState extends State<BidDetails> {
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: <Color>[
-                  HexColor("#FEDB87"),
+                  HexColor(globals.color_blue),
                   HexColor("#BD7923"),
-                  HexColor("#FEDB87"),]),
+                  HexColor(globals.color_blue),]),
           ),
         ),
-        backgroundColor: HexColor("#FEDB87"),
+        backgroundColor: HexColor(globals.color_blue),
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
@@ -231,7 +231,7 @@ class _BidDetailsState extends State<BidDetails> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             GradientText(biddetails[index]["prov_name"] + " - " + biddetails[index]["game_brackets"] + " - " + biddetails[index]["game_session"].toUpperCase(),
-                            style: TextStyle(fontWeight: FontWeight.w600,color: HexColor("#FEDB87"),fontSize: 16),
+                            style: TextStyle(fontWeight: FontWeight.w600,color: HexColor(globals.color_blue),fontSize: 16),
                             ),
 
                           ],

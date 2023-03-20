@@ -276,7 +276,7 @@ class _StarlinemarketsState extends State<Starlinemarkets> {
                             {
                               var snackBar = SnackBar(
                                 content: Text("Market Closed"),
-                                backgroundColor: HexColor("#FEDB87"),
+                                backgroundColor: HexColor(globals.color_blue),
                               );
                               ScaffoldMessenger.of(context).showSnackBar(snackBar);
                             }
@@ -327,9 +327,9 @@ class _StarlinemarketsState extends State<Starlinemarkets> {
                                 //         begin: Alignment.topCenter,
                                 //         end: Alignment.bottomCenter,
                                 //         colors: <Color>[
-                                //           HexColor("#FEDB87"),
+                                //           HexColor(globals.color_blue),
                                 //           HexColor("#BD7923"),
-                                //           HexColor("#FEDB87"),]),
+                                //           HexColor(globals.color_blue),]),
                                 //   ),
                                 //   child: Text("Play Game",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
                                 // ) : Container(),

@@ -268,12 +268,12 @@ class _StarlineCyclePattiState extends State<StarlineCyclePatti> {
                             }
                             else if(itemDetail.length == 0)
                             {
-                              var snackBar = SnackBar(content: Text("No Panels Created Using Given Digits"),backgroundColor:HexColor("#FEDB87"));
+                              var snackBar = SnackBar(content: Text("No Panels Created Using Given Digits"),backgroundColor:HexColor(globals.color_blue));
                               ScaffoldMessenger.of(context).showSnackBar(snackBar);
                             }
                             else
                             {
-                              var snackBar = SnackBar(content: Text("Please Enter Amount"),backgroundColor:HexColor("#FEDB87"));
+                              var snackBar = SnackBar(content: Text("Please Enter Amount"),backgroundColor:HexColor(globals.color_blue));
                               ScaffoldMessenger.of(context).showSnackBar(snackBar);
                             }
 

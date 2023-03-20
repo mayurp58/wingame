@@ -253,14 +253,14 @@ class _StarlineDpMotorState extends State<StarlineDpMotor> {
                                   setState(() {
                                     isApiCallProcess = false;
                                   });
-                                  var snackBar = SnackBar(content: Text(responseJson["message"]),backgroundColor:HexColor("#FEDB87"));
+                                  var snackBar = SnackBar(content: Text(responseJson["message"]),backgroundColor:HexColor(globals.color_blue));
                                   ScaffoldMessenger.of(context).showSnackBar(snackBar);
                                 }
                               });
                             }
                             else
                             {
-                              var snackBar = SnackBar(content: Text("Fields Are Required"),backgroundColor:HexColor("#FEDB87"));
+                              var snackBar = SnackBar(content: Text("Fields Are Required"),backgroundColor:HexColor(globals.color_blue));
                               ScaffoldMessenger.of(context).showSnackBar(snackBar);
                             }
 

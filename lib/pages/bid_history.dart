@@ -71,7 +71,7 @@ class _BidHistoryState extends State<BidHistory> {
                 child: ListTile(
                   tileColor: HexColor(globals.color_background),
                   title: Center(
-                    child: GradientText(marketnames[index]["prov_name"], style: TextStyle(fontWeight: FontWeight.w600,color: HexColor("#FEDB87"))
+                    child: GradientText(marketnames[index]["prov_name"], style: TextStyle(fontWeight: FontWeight.w600,color: HexColor(globals.color_blue))
                     ),
                   ),
                   onTap: () {

@@ -111,13 +111,18 @@ class _StarlineBidHistoryState extends State<StarlineBidHistory> {
         centerTitle: true,
         flexibleSpace: Container(
           decoration: BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: <Color>[
-                  HexColor("#FEDB87"),
-                  HexColor("#BD7923"),
-                  HexColor("#FEDB87"),]),
+              color: HexColor(globals.color_background),
+              boxShadow: [new BoxShadow(
+                color: HexColor(globals.color_blue),
+                blurRadius: 20.0,
+              ),]
+            // gradient: LinearGradient(
+            //     begin: Alignment.topCenter,
+            //     end: Alignment.bottomCenter,
+            //     colors: <Color>[
+            //       HexColor(globals.color_blue),
+            //       HexColor("#BD7923"),
+            //       HexColor(globals.color_blue),]),
           ),
         ),
         leading: IconButton(
@@ -159,16 +164,21 @@ class _StarlineBidHistoryState extends State<StarlineBidHistory> {
         centerTitle: true,
         flexibleSpace: Container(
           decoration: BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: <Color>[
-                  HexColor("#FEDB87"),
-                  HexColor("#BD7923"),
-                  HexColor("#FEDB87"),]),
+              color: HexColor(globals.color_background),
+              boxShadow: [new BoxShadow(
+                color: HexColor(globals.color_blue),
+                blurRadius: 20.0,
+              ),]
+            // gradient: LinearGradient(
+            //     begin: Alignment.topCenter,
+            //     end: Alignment.bottomCenter,
+            //     colors: <Color>[
+            //       HexColor(globals.color_blue),
+            //       HexColor("#BD7923"),
+            //       HexColor(globals.color_blue),]),
           ),
         ),
-        backgroundColor: HexColor("#FEDB87"),
+        backgroundColor: HexColor(globals.color_blue),
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
@@ -231,7 +241,7 @@ class _StarlineBidHistoryState extends State<StarlineBidHistory> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           GradientText(biddetails[index]["prov_name"] + " - " + biddetails[index]["game_brackets"],
-                            style: TextStyle(fontWeight: FontWeight.w600,color: HexColor("#FEDB87"),fontSize: 16),
+                            style: TextStyle(fontWeight: FontWeight.w600,color: HexColor(globals.color_blue),fontSize: 16),
                           ),
 
                         ],

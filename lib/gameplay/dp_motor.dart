@@ -251,14 +251,14 @@ class _DpMotorState extends State<DpMotor> {
                                   setState(() {
                                     isApiCallProcess = false;
                                   });
-                                  var snackBar = SnackBar(content: Text("Something Went Wrong",style: TextStyle(color: Colors.black)),backgroundColor:HexColor("#FEDB87"));
+                                  var snackBar = SnackBar(content: Text("Something Went Wrong",style: TextStyle(color: Colors.black)),backgroundColor:HexColor(globals.color_blue));
                                   ScaffoldMessenger.of(context).showSnackBar(snackBar);
                                 }
                               });
                             }
                             else
                             {
-                              var snackBar = SnackBar(content: Text("Fields Are Required",style: TextStyle(color: Colors.black),),backgroundColor:HexColor("#FEDB87"));
+                              var snackBar = SnackBar(content: Text("Fields Are Required",style: TextStyle(color: Colors.black),),backgroundColor:HexColor(globals.color_blue));
                               ScaffoldMessenger.of(context).showSnackBar(snackBar);
                             }
 

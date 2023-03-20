@@ -83,7 +83,7 @@ class _HistoryTabState extends State<HistoryTab> with SingleTickerProviderStateM
                   borderRadius: BorderRadius.circular(
                     25.0,
                   ),
-                  color: HexColor("#FEDB87"),
+                  color: HexColor(globals.color_blue),
                 ),
                 labelColor: Colors.white,
                 unselectedLabelColor: Colors.black,

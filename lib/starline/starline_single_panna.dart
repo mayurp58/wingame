@@ -268,7 +268,7 @@ class _StarlineSinglePannaState extends State<StarlineSinglePanna> with SingleTi
                             }
                             else
                             {
-                              var snackBar = SnackBar(content: Text("Please Enter Amount"),backgroundColor:HexColor("#FEDB87"));
+                              var snackBar = SnackBar(content: Text("Please Enter Amount"),backgroundColor:HexColor(globals.color_blue));
                               ScaffoldMessenger.of(context).showSnackBar(snackBar);
                             }
 

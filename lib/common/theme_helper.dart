@@ -83,7 +83,7 @@ class ThemeHelper{
   BoxDecoration inputBoxDecorationShaddow() {
     return BoxDecoration(boxShadow: [
       BoxShadow(
-        color: HexColor("#FEDB87").withOpacity(0.1),
+        color: HexColor(globals.color_blue).withOpacity(0.1),
         blurRadius: 20,
         offset: const Offset(0, 5),
       )

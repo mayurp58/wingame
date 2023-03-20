@@ -345,17 +345,17 @@ class _ChoicePannaState extends State<ChoicePanna> {
                             }
                             else if(fulldgt.toString().length != 3 && (sp==false || dp==false || tp==false))
                             {
-                              var snackBar = SnackBar(content: Text("Please Check SP or Dp or TP",style: TextStyle(color: Colors.black),),backgroundColor:HexColor("#FEDB87"));
+                              var snackBar = SnackBar(content: Text("Please Check SP or Dp or TP",style: TextStyle(color: Colors.black),),backgroundColor:HexColor(globals.color_blue));
                               ScaffoldMessenger.of(context).showSnackBar(snackBar);
                             }
                             else if(left_digit.text.isEmpty || middle_digit.text.isEmpty || right_digit.text.isEmpty)
                             {
-                              var snackBar = SnackBar(content: Text("Enter Digit In Left, Middle or Right",style: TextStyle(color: Colors.black),),backgroundColor:HexColor("#FEDB87"));
+                              var snackBar = SnackBar(content: Text("Enter Digit In Left, Middle or Right",style: TextStyle(color: Colors.black),),backgroundColor:HexColor(globals.color_blue));
                               ScaffoldMessenger.of(context).showSnackBar(snackBar);
                             }
                             else
                             {
-                              var snackBar = SnackBar(content: Text("Please Enter Amount"),backgroundColor:HexColor("#FEDB87"));
+                              var snackBar = SnackBar(content: Text("Please Enter Amount"),backgroundColor:HexColor(globals.color_blue));
                               ScaffoldMessenger.of(context).showSnackBar(snackBar);
                             }
 

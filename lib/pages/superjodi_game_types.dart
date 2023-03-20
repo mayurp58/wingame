@@ -64,12 +64,12 @@ class _Sup_game_typesState extends State<Sup_game_types> {
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: <Color>[
-                  HexColor("#FEDB87"),
+                  HexColor(globals.color_blue),
                   HexColor("#BD7923"),
-                  HexColor("#FEDB87"),]),
+                  HexColor(globals.color_blue),]),
           ),
         ),
-        backgroundColor: HexColor("#FEDB87"),
+        backgroundColor: HexColor(globals.color_blue),
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
@@ -101,7 +101,7 @@ class _Sup_game_typesState extends State<Sup_game_types> {
                           borderRadius: BorderRadius.all(Radius.circular(15)),
                         ),
                         padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
-                        //color: HexColor("#FEDB87"),
+                        //color: HexColor(globals.color_blue),
                         child: Text(
                           "Jodies", style: TextStyle(color: Colors.white,),)
                     ),
@@ -122,7 +122,7 @@ class _Sup_game_typesState extends State<Sup_game_types> {
                       borderRadius: BorderRadius.circular(8),
                       color: Colors.white,
                       boxShadow: [
-                        BoxShadow(color: HexColor("#FEDB87"), blurRadius: 1)
+                        BoxShadow(color: HexColor(globals.color_blue), blurRadius: 1)
                       ],
                     ),
                     //color: Colors.grey,
@@ -159,7 +159,7 @@ class _Sup_game_typesState extends State<Sup_game_types> {
                       gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [HexColor(globals.color_blue),HexColor(globals.color_pink)],),
                       borderRadius: BorderRadius.circular(8),
                       color: Colors.white,
-                      boxShadow: [BoxShadow(color: HexColor("#FEDB87"),blurRadius: 1)],
+                      boxShadow: [BoxShadow(color: HexColor(globals.color_blue),blurRadius: 1)],
                     ),
                     //color: Colors.grey,
                     child: InkWell(
@@ -191,7 +191,7 @@ class _Sup_game_typesState extends State<Sup_game_types> {
                       borderRadius: BorderRadius.circular(8),
                       gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [HexColor(globals.color_blue),HexColor(globals.color_pink)],),
                       color: Colors.white,
-                      boxShadow: [BoxShadow(color: HexColor("#FEDB87"),blurRadius: 1)],
+                      boxShadow: [BoxShadow(color: HexColor(globals.color_blue),blurRadius: 1)],
                     ),
                     //color: Colors.grey,
                     child: InkWell(
@@ -223,7 +223,7 @@ class _Sup_game_typesState extends State<Sup_game_types> {
                       borderRadius: BorderRadius.circular(8),
                       gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [HexColor(globals.color_blue),HexColor(globals.color_pink)],),
                       color: Colors.white,
-                      boxShadow: [BoxShadow(color: HexColor("#FEDB87"),blurRadius: 1)],
+                      boxShadow: [BoxShadow(color: HexColor(globals.color_blue),blurRadius: 1)],
                     ),
                     //color: Colors.grey,
                     child: InkWell(

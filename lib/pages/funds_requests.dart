@@ -119,7 +119,7 @@ class _FundRequestsState extends State<FundRequests> {
                     children: [
                       Container(
                         decoration: BoxDecoration(
-                          color: HexColor("#FEDB87"),
+                          color: HexColor(globals.color_blue),
                           gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [Color(0xffFEDB87),Color(0xffBD7923),Color(0xffFEDB87)],),
 
                           borderRadius: BorderRadius.only(

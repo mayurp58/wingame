@@ -76,7 +76,7 @@ class _StarlineGameplayHeaderState extends State<StarlineGameplayHeader> {
           children: [
 
             SizedBox(height: 10,),
-            GradientText(widget.title.toString(),style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500,color: HexColor("#FEDB87")),),
+            GradientText(widget.title.toString(),style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500,color: HexColor(globals.color_blue)),),
             SizedBox(height: 10,),
             GradientText(widget.type.toString(),style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500,color: Colors.black),),
             Row(

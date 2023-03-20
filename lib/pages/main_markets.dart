@@ -174,7 +174,7 @@ class _MainMarketsState extends State<MainMarkets> {
                  {
                    var snackBar = SnackBar(
                      content: Text("Market Closed",style: TextStyle(color: Colors.black),),
-                     backgroundColor: HexColor("#FEDB87"),
+                     backgroundColor: HexColor(globals.color_blue),
                    );
                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
                  }
@@ -184,7 +184,7 @@ class _MainMarketsState extends State<MainMarkets> {
                  margin: EdgeInsets.all(4),
                  decoration: BoxDecoration(
                       //HexColor(globals.color_green)
-                     //border: Border.all(color: landingdata[index]["status"]!="closed" ? HexColor("#FEDB87") : Colors.grey),
+                     //border: Border.all(color: landingdata[index]["status"]!="closed" ? HexColor(globals.color_blue) : Colors.grey),
                      /*border: const GradientBoxBorder(
                        gradient: LinearGradient(colors: [Color(0xffFEDB87),Color(0xffBD7923),Color(0xffFEDB87)],),
                        width: 1,

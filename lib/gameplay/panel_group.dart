@@ -299,22 +299,22 @@ class _PanelGroupState extends State<PanelGroup> {
                             }
                             else if(controller.text == "")
                             {
-                              var snackBar = SnackBar(content: Text("Please Enter Panel" + controller.text,style: TextStyle(color: Colors.black),),backgroundColor:HexColor("#FEDB87"));
+                              var snackBar = SnackBar(content: Text("Please Enter Panel" + controller.text,style: TextStyle(color: Colors.black),),backgroundColor:HexColor(globals.color_blue));
                               ScaffoldMessenger.of(context).showSnackBar(snackBar);
                             }
                             else if(controller.text != "" && amount.text != "")
                             {
-                              var snackBar = SnackBar(content: Text("No Panels Created Using Given Digits " + itemDetail.length.toString(),style: TextStyle(color: Colors.black),),backgroundColor:HexColor("#FEDB87"));
+                              var snackBar = SnackBar(content: Text("No Panels Created Using Given Digits " + itemDetail.length.toString(),style: TextStyle(color: Colors.black),),backgroundColor:HexColor(globals.color_blue));
                               ScaffoldMessenger.of(context).showSnackBar(snackBar);
                             }
                             else if(amount.text == "")
                             {
-                              var snackBar = SnackBar(content: Text("Please Enter Amount",style: TextStyle(color: Colors.black),),backgroundColor:HexColor("#FEDB87"));
+                              var snackBar = SnackBar(content: Text("Please Enter Amount",style: TextStyle(color: Colors.black),),backgroundColor:HexColor(globals.color_blue));
                               ScaffoldMessenger.of(context).showSnackBar(snackBar);
                             }
                             else
                             {
-                              var snackBar = SnackBar(content: Text("Something Went Wrong",style: TextStyle(color: Colors.black),),backgroundColor:HexColor("#FEDB87"));
+                              var snackBar = SnackBar(content: Text("Something Went Wrong",style: TextStyle(color: Colors.black),),backgroundColor:HexColor(globals.color_blue));
                               ScaffoldMessenger.of(context).showSnackBar(snackBar);
                             }
                           }

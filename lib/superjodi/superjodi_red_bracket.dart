@@ -4,7 +4,7 @@ import 'package:wingame/widgets/appbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hexcolor/hexcolor.dart';
-
+import 'package:wingame/globalvar.dart' as globals;
 import '../common/theme_helper.dart';
 class Sup_red_bracket extends StatefulWidget {
   final String? title;
@@ -62,7 +62,7 @@ class _Sup_red_bracketState extends State<Sup_red_bracket> {
                 color: Colors.black,
                 elevation: 20, //shadow elevation for card
                 margin: EdgeInsets.all(8),
-                shadowColor: HexColor("#FEDB87"),
+                shadowColor: HexColor(globals.color_blue),
                 child: Column(
                   children: [
 
@@ -162,7 +162,7 @@ class _Sup_red_bracketState extends State<Sup_red_bracket> {
                             }
                             else
                             {
-                              var snackBar = SnackBar(content: Text("Please Enter Amount",style: TextStyle(color: Colors.black)),backgroundColor:HexColor("#FEDB87"));
+                              var snackBar = SnackBar(content: Text("Please Enter Amount",style: TextStyle(color: Colors.black)),backgroundColor:HexColor(globals.color_blue));
                               ScaffoldMessenger.of(context).showSnackBar(snackBar);
                             }
 

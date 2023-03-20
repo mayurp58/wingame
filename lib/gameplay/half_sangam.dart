@@ -63,7 +63,7 @@ class _HalfSangamState extends State<HalfSangam> {
                 style: ThemeHelper().separatebuttonStyle_bordered(),
                 child: Padding(
                   padding: EdgeInsets.fromLTRB(40, 10, 40, 10),
-                  child: GradientText('Change Pattern'.toUpperCase(), style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: HexColor("#FEDB87")),),
+                  child: GradientText('Change Pattern'.toUpperCase(), style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: HexColor(globals.color_blue)),),
                 ),
                 onPressed: () {
                   if(visible1==true)
@@ -192,12 +192,12 @@ class _HalfSangamState extends State<HalfSangam> {
                                 }
                                 else if(itemDetail.length == 0)
                                 {
-                                  var snackBar = SnackBar(content: Text("No Panels Created Using Given Digits"),backgroundColor:HexColor("#FEDB87"));
+                                  var snackBar = SnackBar(content: Text("No Panels Created Using Given Digits"),backgroundColor:HexColor(globals.color_blue));
                                   ScaffoldMessenger.of(context).showSnackBar(snackBar);
                                 }
                                 else
                                 {
-                                  var snackBar = SnackBar(content: Text("Please Enter Amount"),backgroundColor:HexColor("#FEDB87"));
+                                  var snackBar = SnackBar(content: Text("Please Enter Amount"),backgroundColor:HexColor(globals.color_blue));
                                   ScaffoldMessenger.of(context).showSnackBar(snackBar);
                                 }
 

@@ -61,9 +61,9 @@ class AppDrawer extends StatelessWidget {
                  begin: Alignment.topRight,
                  end: Alignment.topLeft,
                  colors: <Color>[
-                   HexColor("#FEDB87"),
+                   HexColor(globals.color_blue),
                    HexColor("#BD7923"),
-                   HexColor("#FEDB87"),]),
+                   HexColor(globals.color_blue),]),
            ),
            child: Text("Welcome To wingame",style: TextStyle(fontWeight: FontWeight.w400,color: Colors.white)),
          ),*/

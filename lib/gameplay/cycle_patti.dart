@@ -266,22 +266,22 @@ class _CyclePattiState extends State<CyclePatti> {
                             }
                             else if(controller.text == "")
                             {
-                              var snackBar = SnackBar(content: Text("Please Enter Panel",style: TextStyle(color: Colors.black),),backgroundColor:HexColor("#FEDB87"));
+                              var snackBar = SnackBar(content: Text("Please Enter Panel",style: TextStyle(color: Colors.black),),backgroundColor:HexColor(globals.color_blue));
                               ScaffoldMessenger.of(context).showSnackBar(snackBar);
                             }
                             else if(amount.text == "")
                             {
-                              var snackBar = SnackBar(content: Text("Please Enter Amount",style: TextStyle(color: Colors.black),),backgroundColor:HexColor("#FEDB87"));
+                              var snackBar = SnackBar(content: Text("Please Enter Amount",style: TextStyle(color: Colors.black),),backgroundColor:HexColor(globals.color_blue));
                               ScaffoldMessenger.of(context).showSnackBar(snackBar);
                             }
                             else if(itemDetail.length == 0)
                             {
-                              var snackBar = SnackBar(content: Text("No Panels Created Using Given Digits",style: TextStyle(color: Colors.black),),backgroundColor:HexColor("#FEDB87"));
+                              var snackBar = SnackBar(content: Text("No Panels Created Using Given Digits",style: TextStyle(color: Colors.black),),backgroundColor:HexColor(globals.color_blue));
                               ScaffoldMessenger.of(context).showSnackBar(snackBar);
                             }
                             else
                             {
-                              var snackBar = SnackBar(content: Text("Please Enter Amount",style: TextStyle(color: Colors.black),),backgroundColor:HexColor("#FEDB87"));
+                              var snackBar = SnackBar(content: Text("Please Enter Amount",style: TextStyle(color: Colors.black),),backgroundColor:HexColor(globals.color_blue));
                               ScaffoldMessenger.of(context).showSnackBar(snackBar);
                             }
 

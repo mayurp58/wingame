@@ -191,7 +191,7 @@ class _WalletState extends State<Wallet> with SingleTickerProviderStateMixin {
                   borderRadius: BorderRadius.circular(
                     25.0,
                   ),
-                  color: HexColor("#FEDB87"),
+                  color: HexColor(globals.color_blue),
                 ),
                 labelColor: Colors.white,
                 unselectedLabelColor: Colors.black,
@@ -292,7 +292,7 @@ class _WalletState extends State<Wallet> with SingleTickerProviderStateMixin {
                                       //globals.token = responseJson["encryption_key"];
                                       var snackBar = SnackBar(
                                         content: Text(responseJson["message"]),
-                                        backgroundColor: HexColor("#FEDB87"),
+                                        backgroundColor: HexColor(globals.color_blue),
                                       );
                                       ScaffoldMessenger.of(context)
                                           .showSnackBar(snackBar);

@@ -174,7 +174,7 @@ class _JodiDigitState extends State<JodiDigit> {
                               }
                               else
                               {
-                                var snackBar = SnackBar(content: Text("Please Enter Amount",style: TextStyle(color: Colors.black),),backgroundColor:HexColor("#FEDB87"));
+                                var snackBar = SnackBar(content: Text("Please Enter Amount",style: TextStyle(color: Colors.black),),backgroundColor:HexColor(globals.color_blue));
                                 ScaffoldMessenger.of(context).showSnackBar(snackBar);
                               }
 

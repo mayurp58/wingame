@@ -21,16 +21,16 @@ class _AppbarPannaState extends State<AppbarPanna> with AutomaticKeepAliveClient
       child :  AppBar(
         centerTitle: true,
         title: Text(widget.title.toString()),
-        backgroundColor: HexColor("#FEDB87"),
+        backgroundColor: HexColor(globals.color_blue),
         flexibleSpace: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: <Color>[
-                  HexColor("#FEDB87"),
+                  HexColor(globals.color_blue),
                   HexColor("#BD7923"),
-                  HexColor("#FEDB87"),]),
+                  HexColor(globals.color_blue),]),
           ),
         ),
         bottom: TabBar(
@@ -77,7 +77,7 @@ class _AppbarPannaState extends State<AppbarPanna> with AutomaticKeepAliveClient
         actions: <Widget>[
           ElevatedButton.icon(
             style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(HexColor("#FEDB87"))
+                backgroundColor: MaterialStateProperty.all(HexColor(globals.color_blue))
             ),
             onPressed: () {
               Navigator.push(

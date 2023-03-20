@@ -52,6 +52,7 @@ class _NotificationsState extends State<Notifications> {
   List<Widget> _getChildren(int count, String name) => List<Widget>.generate(
     count,
         (i) => ListTile(
+
                     subtitle: Text("\n$name",style: TextStyle(color: Colors.white),),
 
                     title: Text(notifications[i]["dateadded"] + " " + DateFormat('hh:mm a').format(DateFormat("hh:mm").parse(notifications[i]["datecreated"])),
@@ -74,27 +75,38 @@ class _NotificationsState extends State<Notifications> {
       appBar: AppBar(
         flexibleSpace: Container(
           decoration: BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: <Color>[
-                  HexColor("#FEDB87"),
-                  HexColor("#BD7923"),
-                  HexColor("#FEDB87"),]),
+              color: HexColor(globals.color_background),
+              boxShadow: [new BoxShadow(
+                color: HexColor(globals.color_blue),
+                blurRadius: 20.0,
+              ),]
+            // gradient: LinearGradient(
+            //     begin: Alignment.topCenter,
+            //     end: Alignment.bottomCenter,
+            //     colors: <Color>[
+            //       HexColor(globals.color_blue),
+            //       HexColor("#BD7923"),
+            //       HexColor(globals.color_blue),]),
           ),
         ),
-        backgroundColor: HexColor("#FEDB87"),
         title: Text("Notifications"),
       ),
-      body: ListView.builder(
+      body: ListView.separated(
+          separatorBuilder: (context, index) => Divider(
+            color: HexColor(globals.color_blue),
+          ),
+        padding: EdgeInsets.fromLTRB(0, 5, 0, 5),
         itemCount: notifications.length,
         itemBuilder: (context,index){
           return ExpansionTile(
-            title: GradientText(notifications[index]["title"]),
+            title: Text(notifications[index]["title"],style: TextStyle(color: HexColor(globals.color_pink)),),
             children: _getChildren(1, notifications[index]["message"]),
             iconColor: Colors.white,
-            collapsedIconColor: HexColor("#FEDB87"),
+            collapsedIconColor: HexColor(globals.color_pink),
             initiallyExpanded: true,
+            tilePadding: EdgeInsets.fromLTRB(18, 5, 0, 5),
+
+
           );
         }
       ),

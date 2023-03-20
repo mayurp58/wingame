@@ -57,9 +57,9 @@ class _SubmitBidState extends State<SubmitBid> {
             //     begin: Alignment.topCenter,
             //     end: Alignment.bottomCenter,
             //     colors: <Color>[
-            //       HexColor("#FEDB87"),
+            //       HexColor(globals.color_blue),
             //       HexColor("#BD7923"),
-            //       HexColor("#FEDB87"),]),
+            //       HexColor(globals.color_blue),]),
           ),
         ),
         leading: IconButton(
@@ -185,7 +185,7 @@ class _SubmitBidState extends State<SubmitBid> {
                                 TextSpan(text: widget.total.toString(), style: TextStyle(fontWeight: FontWeight.bold,color: HexColor(globals.color_pink)),),
                               ],
                             ),),
-                          //Text(widget.total.toString(),style: TextStyle(color: HexColor("#FEDB87"),fontWeight: FontWeight.bold),),
+                          //Text(widget.total.toString(),style: TextStyle(color: HexColor(globals.color_blue),fontWeight: FontWeight.bold),),
                         ],
                       ),
                   ),
@@ -226,7 +226,7 @@ class _SubmitBidState extends State<SubmitBid> {
                                         globals.balance = responseJson["current_balance"];
                                       });
                                       globals.token = responseJson["encryption_key"];
-                                      var snackBar = SnackBar(content: Text(responseJson["message"],style: TextStyle(color: Colors.black),),backgroundColor:HexColor("#FEDB87"));
+                                      var snackBar = SnackBar(content: Text(responseJson["message"],style: TextStyle(color: Colors.black),),backgroundColor:HexColor(globals.color_blue));
                                       ScaffoldMessenger.of(context).showSnackBar(snackBar);
                                       Navigator.pop(context);
                                       Navigator.pushReplacement(
@@ -248,14 +248,14 @@ class _SubmitBidState extends State<SubmitBid> {
                                       setState(() {
                                         isApiCallProcess = false;
                                       });
-                                      var snackBar = SnackBar(content: Text(responseJson["message"]),backgroundColor:HexColor("#FEDB87"));
+                                      var snackBar = SnackBar(content: Text(responseJson["message"]),backgroundColor:HexColor(globals.color_blue));
                                       ScaffoldMessenger.of(context).showSnackBar(snackBar);
                                     }
                                   });
                                 }
                                 else
                                   {
-                                    var snackBar = SnackBar(content: Text("Insufficient Balance"),backgroundColor:HexColor("#FEDB87"));
+                                    var snackBar = SnackBar(content: Text("Insufficient Balance"),backgroundColor:HexColor(globals.color_blue));
                                     ScaffoldMessenger.of(context).showSnackBar(snackBar);
                                   }
                               }

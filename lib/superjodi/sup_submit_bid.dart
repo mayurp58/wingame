@@ -52,12 +52,12 @@ class _Sup_submit_bidState extends State<Sup_submit_bid> {
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: <Color>[
-                  HexColor("#FEDB87"),
+                  HexColor(globals.color_blue),
                   HexColor("#BD7923"),
-                  HexColor("#FEDB87"),]),
+                  HexColor(globals.color_blue),]),
           ),
         ),
-        backgroundColor: HexColor("#FEDB87"),
+        backgroundColor: HexColor(globals.color_blue),
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
@@ -126,13 +126,13 @@ class _Sup_submit_bidState extends State<Sup_submit_bid> {
                             children: [
                               Align(
                                 alignment: Alignment.topLeft,
-                                child: Text("Points : " + widget.itemDetail[index]["game_bidding_points"],textAlign: TextAlign.left,style: TextStyle(color: HexColor("#FEDB87"),fontWeight: FontWeight.bold),),
+                                child: Text("Points : " + widget.itemDetail[index]["game_bidding_points"],textAlign: TextAlign.left,style: TextStyle(color: HexColor(globals.color_blue),fontWeight: FontWeight.bold),),
                               ),
 
                               SizedBox(height: 6,),
                               Align(
                                 alignment: Alignment.bottomLeft,
-                                child: Text("Digit    : " + widget.itemDetail[index]["game_brackets"],textAlign: TextAlign.left,style: TextStyle(color: HexColor("#FEDB87"),fontWeight: FontWeight.bold),),
+                                child: Text("Digit    : " + widget.itemDetail[index]["game_brackets"],textAlign: TextAlign.left,style: TextStyle(color: HexColor(globals.color_blue),fontWeight: FontWeight.bold),),
                               ),
                             ],
                           ),
@@ -167,15 +167,15 @@ class _Sup_submit_bidState extends State<Sup_submit_bid> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text("Total Points",style: TextStyle(color: HexColor("#FEDB87"),fontWeight: FontWeight.bold),),
+                        Text("Total Points",style: TextStyle(color: HexColor(globals.color_blue),fontWeight: FontWeight.bold),),
                         RichText(
                           text: TextSpan(
                             children: [
-                              WidgetSpan(child: Icon(Icons.currency_rupee,color: HexColor("#FEDB87"),size: 14,)),
-                              TextSpan(text: widget.total.toString(), style: TextStyle(fontWeight: FontWeight.bold,color: HexColor("#FEDB87")),),
+                              WidgetSpan(child: Icon(Icons.currency_rupee,color: HexColor(globals.color_blue),size: 14,)),
+                              TextSpan(text: widget.total.toString(), style: TextStyle(fontWeight: FontWeight.bold,color: HexColor(globals.color_blue)),),
                             ],
                           ),),
-                        //Text(widget.total.toString(),style: TextStyle(color: HexColor("#FEDB87"),fontWeight: FontWeight.bold),),
+                        //Text(widget.total.toString(),style: TextStyle(color: HexColor(globals.color_blue),fontWeight: FontWeight.bold),),
                       ],
                     ),
                   ),
@@ -215,7 +215,7 @@ class _Sup_submit_bidState extends State<Sup_submit_bid> {
                                         globals.balance = responseJson["current_balance"];
                                       });
                                       globals.token = responseJson["encryption_key"];
-                                      var snackBar = SnackBar(content: Text(responseJson["message"],style: TextStyle(color: Colors.black),),backgroundColor:HexColor("#FEDB87"));
+                                      var snackBar = SnackBar(content: Text(responseJson["message"],style: TextStyle(color: Colors.black),),backgroundColor:HexColor(globals.color_blue));
                                       ScaffoldMessenger.of(context).showSnackBar(snackBar);
                                       Navigator.pop(context);
                                       Navigator.pushReplacement(
@@ -238,7 +238,7 @@ class _Sup_submit_bidState extends State<Sup_submit_bid> {
                                       setState(() {
                                         isApiCallProcess = false;
                                       });
-                                      var snackBar = SnackBar(content: Text(responseJson["message"],style: TextStyle(color: Colors.black),),backgroundColor:HexColor("#FEDB87"));
+                                      var snackBar = SnackBar(content: Text(responseJson["message"],style: TextStyle(color: Colors.black),),backgroundColor:HexColor(globals.color_blue));
                                       ScaffoldMessenger.of(context).showSnackBar(snackBar);
                                     }
                                   });

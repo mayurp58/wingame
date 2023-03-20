@@ -71,7 +71,7 @@ class _StarlineDoublePannaState extends State<StarlineDoublePanna> with SingleTi
               StarlineGameplayHeader(id:widget.id.toString(),title: widget.title,type: "Double Pana",session: widget.session,date: widget.date,),
               //////////////////////////////Heade Ends Here////////////////////////////
               Container(
-                //color: HexColor("#FEDB87"),
+                //color: HexColor(globals.color_blue),
                 padding: EdgeInsets.all(5),
                 decoration: BoxDecoration(
                   border: GradientBoxBorder(
@@ -263,7 +263,7 @@ class _StarlineDoublePannaState extends State<StarlineDoublePanna> with SingleTi
                             }
                             else
                             {
-                              var snackBar = SnackBar(content: Text("Please Enter Amount"),backgroundColor:HexColor("#FEDB87"));
+                              var snackBar = SnackBar(content: Text("Please Enter Amount"),backgroundColor:HexColor(globals.color_blue));
                               ScaffoldMessenger.of(context).showSnackBar(snackBar);
                             }
 

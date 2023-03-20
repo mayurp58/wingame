@@ -3,7 +3,7 @@ import 'package:wingame/superjodi/superjodi_gameplay_header.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hexcolor/hexcolor.dart';
-
+import 'package:wingame/globalvar.dart' as globals;
 import '../common/theme_helper.dart';
 import '../widgets/GradientText.dart';
 import '../widgets/appbar.dart';
@@ -65,7 +65,7 @@ class _Sup_group_jodiState extends State<Sup_group_jodi> {
                 color: Colors.black,
                 elevation: 20, //shadow elevation for card
                 margin: EdgeInsets.all(8),
-                shadowColor: HexColor("#FEDB87"),
+                shadowColor: HexColor(globals.color_blue),
                 child: Column(
                   children: [
 
@@ -219,12 +219,12 @@ class _Sup_group_jodiState extends State<Sup_group_jodi> {
                             }
                             else if(jodidgt.text=="")
                             {
-                              var snackBar = SnackBar(content: Text("Please Enter Jodi",style: TextStyle(color: Colors.black)),backgroundColor:HexColor("#FEDB87"));
+                              var snackBar = SnackBar(content: Text("Please Enter Jodi",style: TextStyle(color: Colors.black)),backgroundColor:HexColor(globals.color_blue));
                               ScaffoldMessenger.of(context).showSnackBar(snackBar);
                             }
                             else
                             {
-                              var snackBar = SnackBar(content: Text("Please Enter Amount",style: TextStyle(color: Colors.black)),backgroundColor:HexColor("#FEDB87"));
+                              var snackBar = SnackBar(content: Text("Please Enter Amount",style: TextStyle(color: Colors.black)),backgroundColor:HexColor(globals.color_blue));
                               ScaffoldMessenger.of(context).showSnackBar(snackBar);
                             }
 

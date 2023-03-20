@@ -79,16 +79,16 @@ class _Superjodi_termsState extends State<Superjodi_terms> {
       backgroundColor: HexColor(globals.color_background),
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: HexColor("#FEDB87"),
+        backgroundColor: HexColor(globals.color_blue),
         flexibleSpace: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: <Color>[
-                  HexColor("#FEDB87"),
+                  HexColor(globals.color_blue),
                   HexColor("#BD7923"),
-                  HexColor("#FEDB87"),]),
+                  HexColor(globals.color_blue),]),
           ),
         ),
         leading: IconButton(

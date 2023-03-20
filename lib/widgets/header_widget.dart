@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-
+import 'package:wingame/globalvar.dart' as globals;
 class HeaderWidget extends StatefulWidget {
   final double _height;
   final bool _showIcon;
@@ -36,7 +36,7 @@ class _HeaderWidgetState extends State<HeaderWidget> {
               decoration: new BoxDecoration(
                 gradient: new LinearGradient(
                     colors: [
-                      HexColor("#FEDB87").withOpacity(0.4),
+                      HexColor(globals.color_blue).withOpacity(0.4),
                       HexColor("#000000").withOpacity(0.4),
                     ],
                     begin: const FractionalOffset(0.0, 0.0),

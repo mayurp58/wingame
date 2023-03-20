@@ -3,7 +3,7 @@ import 'package:wingame/superjodi/superjodi_gameplay_header.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hexcolor/hexcolor.dart';
-
+import 'package:wingame/globalvar.dart' as globals;
 import '../common/theme_helper.dart';
 import '../widgets/appbar.dart';
 class Sup_jodi_digit extends StatefulWidget {
@@ -70,7 +70,7 @@ class _Sup_jodi_digitState extends State<Sup_jodi_digit> {
                 color: Colors.black,
                 elevation: 20, //shadow elevation for card
                 margin: EdgeInsets.all(8),
-                shadowColor: HexColor("#FEDB87"),
+                shadowColor: HexColor(globals.color_blue),
                 child: Column(
                   children: [
 
@@ -170,7 +170,7 @@ class _Sup_jodi_digitState extends State<Sup_jodi_digit> {
                             }
                             else
                             {
-                              var snackBar = SnackBar(content: Text("Please Enter Amount",style: TextStyle(color: Colors.black),),backgroundColor:HexColor("#FEDB87"));
+                              var snackBar = SnackBar(content: Text("Please Enter Amount",style: TextStyle(color: Colors.black),),backgroundColor:HexColor(globals.color_blue));
                               ScaffoldMessenger.of(context).showSnackBar(snackBar);
                             }
 

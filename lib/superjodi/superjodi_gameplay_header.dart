@@ -71,12 +71,12 @@ class _Sup_gameplay_headerState extends State<Sup_gameplay_header> {
         color:Colors.black ,
         elevation: 20, //shadow elevation for card
         margin: EdgeInsets.all(8),
-        shadowColor: HexColor("#FEDB87"),
+        shadowColor: HexColor(globals.color_blue),
         child: Column(
           children: [
 
             SizedBox(height: 10,),
-            GradientText(widget.title.toString(),style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500,color: HexColor("#FEDB87")),),
+            GradientText(widget.title.toString(),style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500,color: HexColor(globals.color_blue)),),
             SizedBox(height: 10,),
             GradientText(widget.type.toString(),style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500,color: Colors.black),),
             Row(

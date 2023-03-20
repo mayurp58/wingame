@@ -75,12 +75,12 @@ class _StarlineGameTypesState extends State<StarlineGameTypes> {
             //     begin: Alignment.topCenter,
             //     end: Alignment.bottomCenter,
             //     colors: <Color>[
-            //       HexColor("#FEDB87"),
+            //       HexColor(globals.color_blue),
             //       HexColor("#BD7923"),
-            //       HexColor("#FEDB87"),]),
+            //       HexColor(globals.color_blue),]),
           ),
         ),
-        backgroundColor: HexColor("#FEDB87"),
+        backgroundColor: HexColor(globals.color_blue),
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
@@ -112,7 +112,7 @@ class _StarlineGameTypesState extends State<StarlineGameTypes> {
                           borderRadius: BorderRadius.all(Radius.circular(15)),
                         ),
                         padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
-                        //color: HexColor("#FEDB87"),
+                        //color: HexColor(globals.color_blue),
                         child: Text(
                           "Ank", style: TextStyle(color: Colors.white,),)
                     ),
@@ -170,12 +170,12 @@ class _StarlineGameTypesState extends State<StarlineGameTypes> {
                     padding: EdgeInsets.all(20),
                     child: Container(
                         decoration: BoxDecoration(
-                          color: HexColor("#FEDB87"),
+                          color: HexColor(globals.color_blue),
                           gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [HexColor(globals.color_blue),HexColor(globals.color_pink)],),
                           borderRadius: BorderRadius.all(Radius.circular(15)),
                         ),
                         padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
-                        //color: HexColor("#FEDB87"),
+                        //color: HexColor(globals.color_blue),
                         child: Text(
                           "Panna", style: TextStyle(color: Colors.white,),)
                     ),
@@ -504,11 +504,11 @@ class _StarlineGameTypesState extends State<StarlineGameTypes> {
                     child: Container(
                         decoration: BoxDecoration(
                           gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [HexColor(globals.color_blue),HexColor(globals.color_pink)],),
-                          color: HexColor("#FEDB87"),
+                          color: HexColor(globals.color_blue),
                           borderRadius: BorderRadius.all(Radius.circular(15)),
                         ),
                         padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
-                        //color: HexColor("#FEDB87"),
+                        //color: HexColor(globals.color_blue),
                         child: Text(
                           "Motor", style: TextStyle(color: Colors.white,),)
                     ),

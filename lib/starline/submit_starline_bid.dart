@@ -57,12 +57,12 @@ class _SubmitStarlineBidState extends State<SubmitStarlineBid> {
             //     begin: Alignment.topCenter,
             //     end: Alignment.bottomCenter,
             //     colors: <Color>[
-            //       HexColor("#FEDB87"),
+            //       HexColor(globals.color_blue),
             //       HexColor("#BD7923"),
-            //       HexColor("#FEDB87"),]),
+            //       HexColor(globals.color_blue),]),
           ),
         ),
-        //backgroundColor: HexColor("#FEDB87"),
+        //backgroundColor: HexColor(globals.color_blue),
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
@@ -180,7 +180,7 @@ class _SubmitStarlineBidState extends State<SubmitStarlineBid> {
                               TextSpan(text: widget.total.toString(), style: TextStyle(fontWeight: FontWeight.bold,color: HexColor(globals.color_pink)),),
                             ],
                           ),),
-                        //Text(widget.total.toString(),style: TextStyle(color: HexColor("#FEDB87"),fontWeight: FontWeight.bold),),
+                        //Text(widget.total.toString(),style: TextStyle(color: HexColor(globals.color_blue),fontWeight: FontWeight.bold),),
                       ],
                     ),
                   ),
@@ -221,7 +221,7 @@ class _SubmitStarlineBidState extends State<SubmitStarlineBid> {
                                         globals.balance = responseJson["current_balance"];
                                       });
                                       globals.token = responseJson["encryption_key"];
-                                      var snackBar = SnackBar(content: Text(responseJson["message"],style: TextStyle(color: Colors.black),),backgroundColor:HexColor("#FEDB87"));
+                                      var snackBar = SnackBar(content: Text(responseJson["message"],style: TextStyle(color: Colors.black),),backgroundColor:HexColor(globals.color_blue));
                                       ScaffoldMessenger.of(context).showSnackBar(snackBar);
                                       Navigator.pop(context);
                                       Navigator.pushReplacement(
@@ -243,7 +243,7 @@ class _SubmitStarlineBidState extends State<SubmitStarlineBid> {
                                       setState(() {
                                         isApiCallProcess = false;
                                       });
-                                      var snackBar = SnackBar(content: Text(responseJson["message"]),backgroundColor:HexColor("#FEDB87"));
+                                      var snackBar = SnackBar(content: Text(responseJson["message"]),backgroundColor:HexColor(globals.color_blue));
                                       ScaffoldMessenger.of(context).showSnackBar(snackBar);
                                     }
                                   });
