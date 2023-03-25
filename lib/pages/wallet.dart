@@ -685,11 +685,11 @@ class _WalletState extends State<Wallet> with SingleTickerProviderStateMixin {
                               ),
                             ),
                             SizedBox(
-                              height: 20,
+                              height: 10,
                             ),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: GradientText(note["description"].toString(),style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16),),
+                              child: Text(note["description"].toString(),style: TextStyle(fontWeight: FontWeight.bold,fontSize: 14,color: Colors.white70),textAlign: TextAlign.center,),
                             ),
                           ],
                         ),

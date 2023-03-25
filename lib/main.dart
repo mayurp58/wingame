@@ -6,7 +6,7 @@ import 'firebase_options.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:splashscreen/splashscreen.dart' as prefix0;
+import 'package:easy_splash_screen/easy_splash_screen.dart' as prefix0;
 import 'dart:async';
 import 'package:wingame/globalvar.dart' as globals;
 /// Define a top-level named handler which background/terminated messages will
@@ -199,15 +199,15 @@ class _ShowSplashState extends State<ShowSplash> {
     return Container(
         color: Colors.white,
         //margin: EdgeInsets.only( top: 40) ,
-        child: prefix0.SplashScreen(
-          seconds: 4,
-          image: Image.asset("assets/wingame.gif",fit: BoxFit.fitWidth,alignment: Alignment.center,width: 200,),
-          navigateAfterSeconds: const LoginPage(),
-          photoSize: MediaQuery.of(context).size.height * 0.30,
+        child: prefix0.EasySplashScreen(
+          durationInSeconds: 4,
+          logo: Image.asset("assets/wingame.gif",fit: BoxFit.fitWidth,alignment: Alignment.center,width: 200,),
+          navigator: const LoginPage(),
+          logoWidth: MediaQuery.of(context).size.height * 0.30,
           loaderColor: HexColor(globals.color_pink),
-          useLoader : true,
-            loadingText:const Text("Welcome To Wingame",style: TextStyle(color: Colors.white),),
-            backgroundColor:HexColor(globals.color_background),
+          showLoader : true,
+          loadingText:const Text("Welcome To Wingame",style: TextStyle(color: Colors.white),),
+          backgroundColor:HexColor(globals.color_background),
 
         )
     );

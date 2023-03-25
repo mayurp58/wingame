@@ -8,7 +8,7 @@ import 'package:wingame/pages/registration_page.dart';
 import 'package:http/http.dart' as http;
 class APIService
 {
-  String APIURL = "https://www.wingame.pro/api/";
+  String APIURL = "https://wingame.livegames.pro/api/";
   Future<String> apicall(Map request,String endpoint)
   async {
     http.Client().close();

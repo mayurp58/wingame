@@ -101,13 +101,13 @@ class _FundRequestsState extends State<FundRequests> {
           itemCount: fundrequests.length,
           itemBuilder: (context, index) {
             return Card(
-              color: Colors.black,
+              color: HexColor(globals.color_background),
               child: Padding(
                 padding: const EdgeInsets.all(3.0),
                 child: Container(
                   decoration: BoxDecoration(
                     border: const GradientBoxBorder(
-                      gradient: LinearGradient(colors: [Color(0xffFEDB87),Color(0xffBD7923),Color(0xffFEDB87)],),
+                      gradient: LinearGradient(colors: [Color(0xffff66c4),Color(0xff514ed8)],),
                       width: 1,
                     ),
                     borderRadius: BorderRadius.circular(8),
@@ -120,7 +120,7 @@ class _FundRequestsState extends State<FundRequests> {
                       Container(
                         decoration: BoxDecoration(
                           color: HexColor(globals.color_blue),
-                          gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [Color(0xffFEDB87),Color(0xffBD7923),Color(0xffFEDB87)],),
+                          gradient: LinearGradient(begin: Alignment.topCenter,end: Alignment.bottomCenter, colors: [Color(0xffff66c4),Color(0xff514ed8)],),
 
                           borderRadius: BorderRadius.only(
                               topRight: Radius.circular(0),

@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 import 'package:wingame/common/api_service.dart';
 import 'package:wingame/common/encrypt_service.dart';
 import 'package:wingame/globalvar.dart' as globals;
@@ -112,13 +113,18 @@ class _BidDetailsState extends State<BidDetails> {
         centerTitle: true,
         flexibleSpace: Container(
           decoration: BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: <Color>[
-                  HexColor(globals.color_blue),
-                  HexColor("#BD7923"),
-                  HexColor(globals.color_blue),]),
+              color: HexColor(globals.color_background),
+              boxShadow: [new BoxShadow(
+                color: HexColor(globals.color_blue),
+                blurRadius: 20.0,
+              ),]
+            // gradient: LinearGradient(
+            //     begin: Alignment.topCenter,
+            //     end: Alignment.bottomCenter,
+            //     colors: <Color>[
+            //       HexColor(globals.color_blue),
+            //       HexColor("#BD7923"),
+            //       HexColor(globals.color_blue),]),
           ),
         ),
         backgroundColor: HexColor(globals.color_blue),
@@ -135,7 +141,7 @@ class _BidDetailsState extends State<BidDetails> {
         ),
       ),
       body: Container(
-        color: Colors.black,
+        color: HexColor(globals.color_background),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -144,7 +150,7 @@ class _BidDetailsState extends State<BidDetails> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                GradientText("Bidding History Not Available",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w300,color: Colors.grey),)
+                Text("Bidding History Not Available",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w300,color: Colors.grey),)
               ],
             ),
 
@@ -162,13 +168,18 @@ class _BidDetailsState extends State<BidDetails> {
         centerTitle: true,
         flexibleSpace: Container(
           decoration: BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: <Color>[
-                  HexColor(globals.color_blue),
-                  HexColor("#BD7923"),
-                  HexColor(globals.color_blue),]),
+              color: HexColor(globals.color_background),
+              boxShadow: [new BoxShadow(
+                color: HexColor(globals.color_blue),
+                blurRadius: 20.0,
+              ),]
+            // gradient: LinearGradient(
+            //     begin: Alignment.topCenter,
+            //     end: Alignment.bottomCenter,
+            //     colors: <Color>[
+            //       HexColor(globals.color_blue),
+            //       HexColor("#BD7923"),
+            //       HexColor(globals.color_blue),]),
           ),
         ),
         backgroundColor: HexColor(globals.color_blue),
@@ -189,12 +200,15 @@ class _BidDetailsState extends State<BidDetails> {
         itemCount: biddetails.length,
         itemBuilder: (context, index) {
           return Card(
-            color: Colors.black,
+            color: HexColor(globals.color_background),
             child: Padding(
               padding: const EdgeInsets.all(3.0),
               child: Container(
                   decoration: BoxDecoration(
-                    border: Border.all(color: HexColor("#000000")),
+                    border: const GradientBoxBorder(
+                      gradient: LinearGradient(colors: [Color(0xffff66c4),Color(0xff514ed8)],),
+                      width: 1,
+                    ),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   //padding: EdgeInsets.fromLTRB(20, 15, 20, 15),
