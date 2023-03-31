@@ -349,6 +349,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         Container(
                           child: TextFormField(
                             keyboardType: TextInputType.text,
+                            maxLength: 11,
                             decoration: ThemeHelper().textInputDecoration(
                                 'IFSC Code', 'Enter Banks IFSC Code'),
                             onSaved: (input) => profileModel.ifsc_code = input,
