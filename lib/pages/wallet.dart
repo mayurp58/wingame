@@ -67,7 +67,7 @@ class _WalletState extends State<Wallet> with SingleTickerProviderStateMixin {
       Map<String, dynamic> responseJson = json.decode(value);
       var successcode = int.parse(responseJson["success"].toString());
       if (successcode != 0 && successcode != 3) {
-        print(responseJson);
+        //print(responseJson);
         setState(() {
           isApiCallProcess = false;
           //globals.token = responseJson["encryption_key"];
@@ -136,8 +136,8 @@ class _WalletState extends State<Wallet> with SingleTickerProviderStateMixin {
   @override
   void dispose() {
     BackButtonInterceptor.remove(myInterceptor);
-    super.dispose();
     _tabController.dispose();
+    super.dispose();
   }
 
   bool myInterceptor(bool stopDefaultButtonEvent, RouteInfo info) {
@@ -147,7 +147,7 @@ class _WalletState extends State<Wallet> with SingleTickerProviderStateMixin {
       context,
       MaterialPageRoute(builder: (context) => LandingPage()),
     );
-    return false;
+    return true;
   }
 
   @override
@@ -363,7 +363,7 @@ class _WalletState extends State<Wallet> with SingleTickerProviderStateMixin {
                                   child: Text(
                                     note_dep.toString(),
                                     textAlign: TextAlign.center,
-                                    style: TextStyle(fontSize: 16),
+                                    style: TextStyle(fontSize: 16,color: Colors.white70),
                                   ))),
                         ],
                       ),
