@@ -72,6 +72,7 @@ class _DoublePannaState extends State<DoublePanna> with SingleTickerProviderStat
                 color: HexColor(globals.color_background),
                 padding: EdgeInsets.all(5),
                 child: TabBar(
+                    onTap: (_) => FocusScope.of(context).requestFocus(new FocusNode()),
                     isScrollable: true,
                     labelColor: Colors.black,
                     unselectedLabelColor: Colors.white,
@@ -188,7 +189,7 @@ class _DoublePannaState extends State<DoublePanna> with SingleTickerProviderStat
                       inputFormatters: <TextInputFormatter>[FilteringTextInputFormatter.digitsOnly],
                       //onSaved: (input) => (input!="") ? takeNumber(_controller[panna].text, item.id.toString()) : "",
                       //onEditingComplete: (){ takeNumber(_controller[panna].text, item.id.toString()); },
-                      onChanged: (val)=>{ (int.parse(val) >= 10) ? map1[item.id.toString()] = val : null },
+                      onChanged: (val)=>{ (int.parse(val) >= 10) ? map1[item.id.toString()] = val : map1[item.id.toString()] = "" },
                       validator: (input) => (input!.isNotEmpty && int.parse(input) < 10)
                           ? "Amount Greater Than 10"
                           : null,

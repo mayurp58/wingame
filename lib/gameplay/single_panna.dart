@@ -74,6 +74,7 @@ class _SinglePannaState extends State<SinglePanna> with SingleTickerProviderStat
 
                 padding: EdgeInsets.all(5),
                 child: TabBar(
+                    onTap: (_) => FocusManager.instance.primaryFocus?.unfocus(),
                     isScrollable: true,
                     unselectedLabelColor: Colors.white,
                     labelColor: Colors.white,
@@ -190,7 +191,7 @@ class _SinglePannaState extends State<SinglePanna> with SingleTickerProviderStat
                         inputFormatters: <TextInputFormatter>[FilteringTextInputFormatter.digitsOnly],
                         //onSaved: (input) => (input!="") ? takeNumber(_controller[panna].text, item.id.toString()) : "",
                         //onEditingComplete: (){ takeNumber(_controller[panna].text, item.id.toString()); },
-                        onChanged: (val)=>{ (int.parse(val) >= 10) ? map1[item.id.toString()] = val : null },
+                        onChanged: (val)=>{ (int.parse(val) >= 10) ? map1[item.id.toString()] = val : map1[item.id.toString()] = "" },
                         validator: (input) => (input!.isNotEmpty && int.parse(input) < 10)
                             ? "Amount Greater Than 10"
                             : null,
