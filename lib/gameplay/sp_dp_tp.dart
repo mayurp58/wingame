@@ -380,15 +380,15 @@ class _SpDpTpState extends State<SpDpTp> {
     if(dp==true && left_digit.text=="0"){ setpatties(itemListdp_zero,"2"); }
 
     if(tp==true && left_digit.text=="0"){ setState((){ bet_patties = (bet_patties.length == 0) ?  "000" : bet_patties + ", " + "000"; }); }
-    if(tp==true && left_digit.text=="1"){ setState((){ bet_patties = (bet_patties.length == 0) ?  "111" : bet_patties + ", " + "111"; }); }
-    if(tp==true && left_digit.text=="2"){ setState((){ bet_patties = (bet_patties.length == 0) ?  "222" : bet_patties + ", " + "222"; }); }
-    if(tp==true && left_digit.text=="3"){ setState((){ bet_patties = (bet_patties.length == 0) ?  "333" : bet_patties + ", " + "333"; }); }
-    if(tp==true && left_digit.text=="4"){ setState((){ bet_patties = (bet_patties.length == 0) ?  "444" : bet_patties + ", " + "444"; }); }
+    if(tp==true && left_digit.text=="1"){ setState((){ bet_patties = (bet_patties.length == 0) ?  "777" : bet_patties + ", " + "777"; }); }
+    if(tp==true && left_digit.text=="2"){ setState((){ bet_patties = (bet_patties.length == 0) ?  "444" : bet_patties + ", " + "444"; }); }
+    if(tp==true && left_digit.text=="3"){ setState((){ bet_patties = (bet_patties.length == 0) ?  "111" : bet_patties + ", " + "111"; }); }
+    if(tp==true && left_digit.text=="4"){ setState((){ bet_patties = (bet_patties.length == 0) ?  "888" : bet_patties + ", " + "888"; }); }
     if(tp==true && left_digit.text=="5"){ setState((){ bet_patties = (bet_patties.length == 0) ?  "555" : bet_patties + ", " + "555"; }); }
-    if(tp==true && left_digit.text=="6"){ setState((){ bet_patties = (bet_patties.length == 0) ?  "666" : bet_patties + ", " + "666"; }); }
-    if(tp==true && left_digit.text=="7"){ setState((){ bet_patties = (bet_patties.length == 0) ?  "777" : bet_patties + ", " + "777"; }); }
-    if(tp==true && left_digit.text=="8"){ setState((){ bet_patties = (bet_patties.length == 0) ?  "888" : bet_patties + ", " + "888"; }); }
-    if(tp==true && left_digit.text=="9"){ setState((){ bet_patties = (bet_patties.length == 0) ?  "999" : bet_patties + ", " + "999"; }); }
+    if(tp==true && left_digit.text=="6"){ setState((){ bet_patties = (bet_patties.length == 0) ?  "222" : bet_patties + ", " + "222"; }); }
+    if(tp==true && left_digit.text=="7"){ setState((){ bet_patties = (bet_patties.length == 0) ?  "999" : bet_patties + ", " + "999"; }); }
+    if(tp==true && left_digit.text=="8"){ setState((){ bet_patties = (bet_patties.length == 0) ?  "666" : bet_patties + ", " + "666"; }); }
+    if(tp==true && left_digit.text=="9"){ setState((){ bet_patties = (bet_patties.length == 0) ?  "333" : bet_patties + ", " + "333"; }); }
   }
 }
 class Item {
