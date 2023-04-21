@@ -50,7 +50,7 @@ class _SpDpTpState extends State<SpDpTp> {
   var itemListdp_seven = {"115","133","188","223","377","449","557","566","700"};
   var itemListdp_eight = {"116","224","233","288","440","477","558","990","800"};
   var itemListdp_nine = {"117","144","199","225","388","559","577","667","900"};
-  var itemListdp_zero = {"118","226","244","299","334","488","668","677","500"};
+  var itemListdp_zero = {"118","226","244","299","334","488","668","677","550"};
 
   void takeNumber(String inputamount, String bracket,String type_id) {
     try {
@@ -301,15 +301,15 @@ class _SpDpTpState extends State<SpDpTp> {
                               if(dp==true && left_digit.text=="0"){ getlist(itemListdp_zero,"2"); }
 
                               if(tp==true && left_digit.text=="0"){ takeNumber(amount.text.toString() ,"000","3"); }
-                              if(tp==true && left_digit.text=="1"){ takeNumber(amount.text.toString() ,"111","3"); }
-                              if(tp==true && left_digit.text=="2"){ takeNumber(amount.text.toString() ,"222","3"); }
-                              if(tp==true && left_digit.text=="3"){ takeNumber(amount.text.toString() ,"333","3"); }
-                              if(tp==true && left_digit.text=="4"){ takeNumber(amount.text.toString() ,"444","3"); }
+                              if(tp==true && left_digit.text=="1"){ takeNumber(amount.text.toString() ,"777","3"); }
+                              if(tp==true && left_digit.text=="2"){ takeNumber(amount.text.toString() ,"444","3"); }
+                              if(tp==true && left_digit.text=="3"){ takeNumber(amount.text.toString() ,"111","3"); }
+                              if(tp==true && left_digit.text=="4"){ takeNumber(amount.text.toString() ,"888","3"); }
                               if(tp==true && left_digit.text=="5"){ takeNumber(amount.text.toString() ,"555","3"); }
-                              if(tp==true && left_digit.text=="6"){ takeNumber(amount.text.toString() ,"666","3"); }
-                              if(tp==true && left_digit.text=="7"){ takeNumber(amount.text.toString() ,"777","3"); }
-                              if(tp==true && left_digit.text=="8"){ takeNumber(amount.text.toString() ,"888","3"); }
-                              if(tp==true && left_digit.text=="9"){ takeNumber(amount.text.toString() ,"999","3"); }
+                              if(tp==true && left_digit.text=="6"){ takeNumber(amount.text.toString() ,"222","3"); }
+                              if(tp==true && left_digit.text=="7"){ takeNumber(amount.text.toString() ,"999","3"); }
+                              if(tp==true && left_digit.text=="8"){ takeNumber(amount.text.toString() ,"666","3"); }
+                              if(tp==true && left_digit.text=="9"){ takeNumber(amount.text.toString() ,"333","3"); }
 
                               Navigator.push(
                                   context,
