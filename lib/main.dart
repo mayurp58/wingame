@@ -1,7 +1,11 @@
+import 'dart:convert';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:wingame/pages/login_page.dart';
+import 'common/api_service.dart';
 import 'firebase_options.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -141,14 +145,32 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
 
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      /*theme: ThemeData(
+    // return MaterialApp(
+    //   debugShowCheckedModeBanner: false,
+    //   /*theme: ThemeData(
+    //     fontFamily: 'Montserrat'
+    //   ),*/
+    //   //home: LoginPage(),
+    //   home: ShowSplash(),
+    // );
+
+    // if(appVersion=="1.0" && appVersion!="")
+    // {
+      return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        /*theme: ThemeData(
         fontFamily: 'Montserrat'
       ),*/
-      //home: LoginPage(),
-      home: ShowSplash(),
-    );
+        home: ShowSplash(),
+      );
+    // }
+    // else
+    // {
+    //   return MaterialApp(
+    //     debugShowCheckedModeBanner: false,
+    //     home: show_update_app_dialog(context),
+    //   );
+    // }
   }
 
   Future<void> setToken(String? token) async {
@@ -194,15 +216,31 @@ class ShowSplash extends StatefulWidget {
 }
 
 class _ShowSplashState extends State<ShowSplash> {
+
+  String appVersion = "";
+  String downloadUrl = "";
+  String updateMsg = "";
+
   @override
   Widget build(BuildContext context) {
+    APIService apiService = new APIService();
+    apiService.apicall_getdata("appversion_check_flutter").then((value) {
+      Map<String, dynamic> responseJson = json.decode(value);
+      print(responseJson);
+      setState(() {
+        appVersion = responseJson["Appversion"];
+        downloadUrl = responseJson["url"];
+        updateMsg = responseJson["msg"];
+      });
+    });
+
     return Container(
         color: Colors.white,
         //margin: EdgeInsets.only( top: 40) ,
         child: prefix0.EasySplashScreen(
           durationInSeconds: 4,
           logo: Image.asset("assets/wingame.gif",fit: BoxFit.fitWidth,alignment: Alignment.center,width: 200,),
-          navigator: const LoginPage(),
+          navigator: (appVersion=="1.0") ? LoginPage() : show_update_app_dialog(context),
           logoWidth: MediaQuery.of(context).size.height * 0.30,
           loaderColor: HexColor(globals.color_pink),
           showLoader : true,
@@ -211,5 +249,66 @@ class _ShowSplashState extends State<ShowSplash> {
 
         )
     );
+  }
+
+  @override
+  Widget show_update_app_dialog(BuildContext context) {
+
+    return Dialog(
+      backgroundColor: HexColor(globals.color_background),
+      shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20.0)), //this right here
+      child: Container(
+        decoration: BoxDecoration(
+            color: HexColor(globals.color_background),
+            borderRadius: BorderRadius.circular(20.0),      // Radius of the border
+            border: Border.all(
+              color: HexColor(globals.color_blue),
+              width: 3,
+              // Color of the border
+            )
+        ),
+        height: 350,
+        width: 300,
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Container(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Center(child: Text("New App Version Found",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.white),)),
+                SizedBox(height: 20,),
+                Text(updateMsg,style: TextStyle(color: Colors.white70),),
+                SizedBox(height: 20,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    ElevatedButton(
+                      //style : ThemeHelper().filled_square_button(),
+                        style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.transparent),side: MaterialStateProperty.all(BorderSide(color: HexColor(globals.color_pink)))),
+                        onPressed: () async {
+                          String url = downloadUrl;
+                          _launchInBrowser(Uri.parse(url));
+                        }, child: Text("Download"))
+                  ],
+                ),
+
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+
+  }
+  Future<void> _launchInBrowser(Uri url) async {
+    final Uri toLaunch = Uri.parse(url.toString());
+    if (!await launchUrl(
+      url,
+      mode: LaunchMode.externalApplication,
+    )) {
+      throw 'Could not launch $toLaunch';
+    }
   }
 }
